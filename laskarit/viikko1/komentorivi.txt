@@ -1,4 +1,4 @@
-tmponni@melkki:~$ cat tree_tuloste.txt
+
 kurssit
 └── ot2021
     └── viikko1
@@ -14,4 +14,3 @@ kurssit
                     └── maksukortti_test.py
 
 5 directories, 7 files
-tmponni@melkki:~$ 
