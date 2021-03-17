@@ -1,0 +1,113 @@
+commit c5dd731dc12f4b3ddcb2fae4e873070ab9b7e97f
+Author: Tino Pönni <tino.ponni@tutanota.com>
+Date:   Wed Mar 17 13:32:19 2021 +0200
+
+    poistetiin file1, uudelleen nimettiin file2
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 9f8d5c85f223560ec852f8658dc77bf90fd9e561
+Author: Tino Pönni <tino.ponni@tutanota.com>
+Date:   Wed Mar 17 13:27:38 2021 +0200
+
+    Lisättin hakemisto ja touch tiedostot
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 09b19be0119e5ce1dcc8e9c11287d80b8cdbae6d
+Author: Tino Pönni <tino.ponni@tutanota.com>
+Date:   Wed Mar 17 13:21:40 2021 +0200
+
+    Muutoksia teksteihin
+
+ eka.txt    | 9 ++-------
+ kolmas.txt | 4 +++-
+ 2 files changed, 5 insertions(+), 8 deletions(-)
+
+commit 1296cf0b5ff1bcdd0713b809153dfa8ae416d346
+Author: Tino Pönni <tino.ponni@tutanota.com>
+Date:   Wed Mar 17 13:16:26 2021 +0200
+
+    uudelleen nimettiin tiedosto.txt
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 8f81316abc2ddab21f0ed5cfe8abf40cddee4d73
+Author: Tino Pönni <tino.ponni@tutanota.com>
+Date:   Wed Mar 17 13:14:29 2021 +0200
+
+    Poistettiin toinen.txt
+
+ toinen.txt | 1 -
+ 1 file changed, 1 deletion(-)
+
+commit 14f5315873e9485f8b7e3f198d4a6d62a47a00cd
+Author: Tino Pönni <tino.ponni@tutanota.com>
+Date:   Wed Mar 17 13:10:57 2021 +0200
+
+    Muokattiin paljon tekstiä
+
+ tiedosto.txt | 29 +++++++++++------------------
+ 1 file changed, 11 insertions(+), 18 deletions(-)
+
+commit 36943ab76088c6748c11bdd6a4ec36b7dd38f4b6
+Author: Tino Pönni <tino.ponni@tutanota.com>
+Date:   Wed Mar 17 13:07:52 2021 +0200
+
+    lisättiin paljon tekstiä
+
+ tiedosto.txt | 32 ++++++++++++++++++++++++++++++++
+ 1 file changed, 32 insertions(+)
+
+commit 408360e9e71b09c1aba0b92c2aeae1eda9435c9f
+Author: Tino Pönni <tino.ponni@tutanota.com>
+Date:   Wed Mar 17 13:04:38 2021 +0200
+
+    hakemisto stuff lisätty
+
+ stuff/tiedosto2.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit dd73243af106181f9cd42d015c37d28cd90298e6
+Author: Tino Pönni <tino.ponni@tutanota.com>
+Date:   Wed Mar 17 13:03:25 2021 +0200
+
+    Lisättiin tekstiä
+
+ kolmas.txt | 1 +
+ toinen.txt | 1 +
+ 2 files changed, 2 insertions(+)
+
+commit 95ef725ad1a8bf101b46d93919c018e542ebb6d8
+Author: Tino Pönni <tino.ponni@tutanota.com>
+Date:   Wed Mar 17 13:02:15 2021 +0200
+
+    luotiin kolmas.txt
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 793431234e298c04fda035dbe6dbabbbc139885b
+Author: Tino Pönni <tino.ponni@tutanota.com>
+Date:   Wed Mar 17 13:00:36 2021 +0200
+
+    muutos ja lisäys
+
+ tiedosto.txt | 1 +
+ toinen.txt   | 0
+ 2 files changed, 1 insertion(+)
+
+commit 9df5873215fa4e74214915a0e494cc75cd129efd
+Author: Tino Pönni <tino.ponni@tutanota.com>
+Date:   Wed Mar 17 12:58:35 2021 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
