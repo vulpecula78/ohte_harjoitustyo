@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Ohjemointitekniikan harjoitystyö
 
 Tällä viikolla on harjoiteltu:
