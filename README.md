@@ -12,3 +12,6 @@
  1. [Maksukortti harjoitukset](https://github.com/vulpecula78/ohte_harjoitustyo/tree/master/laskarit/viikko2/maksukortti)
  1. [Unicafe testit](https://github.com/vulpecula78/ohte_harjoitustyo/tree/master/laskarit/viikko2/unicafe/src/tests)
 
+### Harjoitustyö
+ 1. [Määrittelydokumentti](https://github.com/vulpecula78/ohte_harjoitustyo/blob/master/project-pong/dokumentaatio/vaatimusmaarittely.md)
+ 1. [Työaikakirjanpito](https://github.com/vulpecula78/ohte_harjoitustyo/blob/master/project-pong/dokumentaatio/tyoaikakirjanpito.md)
