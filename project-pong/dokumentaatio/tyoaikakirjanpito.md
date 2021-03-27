@@ -3,5 +3,5 @@
 
 | päiväys | tunnit | mitä tehty:  |
 | :------:|:-------| :------------|
-| 27.3 | 2    |Projectin alustus ja määrittely dokumentti |
+| 27.3 | 2,5    |Projektin alustus ja määrittely dokumentti |
 

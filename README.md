@@ -1,4 +1,4 @@
-# Ohjemointitekniikan harjoitystyö
+# Ohjemointitekniikan harjoitustyö
 
 ## Tehtävät
 
