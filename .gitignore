@@ -5,4 +5,12 @@
 /laskarit/viikko2/unicafe/src/tests/__pycache__/
 /laskarit/viikko2/unicafe/.coverage
 /laskarit/viikko2/unicafe/htmlcov
+/project-pong/htmlcov
+/project-pong/.pytest_cache
+/project-pong/.coverage
+/project-pong/src/__pycache__/
+/project-pong/src/tests/.coverage
+/project-pong/src/tests/__pycache__/
+
+
 

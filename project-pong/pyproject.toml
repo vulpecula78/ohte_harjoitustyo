@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "project-pong"
 version = "0.1.0"
-description = ""
+description = "Another pong like game"
 authors = ["Tino Pönni <tino.ponni@tutanota.com>"]
 
 [tool.poetry.dependencies]
@@ -10,6 +10,7 @@ pygame = "^2.0.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.2"
+coverage = "^5.5"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
