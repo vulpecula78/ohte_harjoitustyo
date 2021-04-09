@@ -4,18 +4,18 @@ from bat import Bat
 
 class TestBat(unittest.TestCase):
     def setUp(self):
-        self.bat = Bat(5, 250)
+        self.bat = Bat(5, 250, 800, 600)
 
     def test_konstruktori_luo_mailan_haluttuun_kohtaan(self):
         self.assertEqual((self.bat.rect.x), 5)
         self.assertEqual((self.bat.rect.y), 250)
 
     def test_sijoita_maila(self):
-        self.bat.setYposition(500)
-        self.assertEqual((self.bat.rect.y), 500)
+        self.bat.setYposition(455)
+        self.assertEqual((self.bat.rect.y), 455)
 
     def test_mailaa_ei_voi_sijoittaa_liian_alas(self):
-        self.bat.setYposition(520)
+        self.bat.setYposition(490)
         self.assertEqual((self.bat.rect.y), 250)
 
     def test_mailaa_ei_voi_sijoittaa_liian_ylos(self):
@@ -36,8 +36,8 @@ class TestBat(unittest.TestCase):
         self.bat.moveUp()
         self.assertEqual((self.bat.rect.y), 0)
         
-    def test_maila_ei_saa_Y_arvoksi_suurempaa_kuin_500(self):
+    def test_maila_ei_saa_Y_arvoksi_suurempaa_kuin_455(self):
         self.bat.setYposition(497)
         self.bat.moveDown()
         self.bat.moveDown()
-        self.assertEqual((self.bat.rect.y), 499)
+        self.assertLess((self.bat.rect.y), 456)
