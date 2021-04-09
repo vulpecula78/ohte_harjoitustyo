@@ -1,9 +1,12 @@
-import pygame
+'''Bat module for another pong clone again'''
 import os
+import pygame
 
 dirname = os.path.dirname(__file__)
 
+'''Class Bat'''
 class Bat(pygame.sprite.Sprite):
+    ''' Initializes bat with starting position and screen size'''
     def __init__(self, pos_x, pos_y, scr_width, scr_height):
         super().__init__()
 
@@ -15,17 +18,19 @@ class Bat(pygame.sprite.Sprite):
         self.scr_width = scr_width
         self.scr_height = scr_height
 
-    def setYposition(self, yPos):
-        if yPos >= 0 and yPos <= self.scr_height - 145: #45 pixels for scores
-            self.rect.y = yPos
+    def set_y_position(self, y_pos):
+        '''Sets new vertical position with given value.
+            Bat y_pos is between 0 and screen height - 100 (bat size) - 45(score area).'''
+        if 0 <= y_pos <= self.scr_height - 145:
+            self.rect.y = y_pos
 
-    def moveUp(self):
+    def move_up(self):
+        '''Moves bat up by 2 pixels, until y position is 0'''
         if self.rect.top > 1:
             self.rect.y -= 2
 
-    def moveDown(self):
-        if self.rect.top < self.scr_height - 145: #45 pixels for scores
+    def move_down(self):
+        '''Moves bat down by 2 pixels until y position is screen height - 145
+            (100 from bat, 45 from score area)'''
+        if self.rect.top < self.scr_height - 145:
             self.rect.y += 2
-
-        
-        

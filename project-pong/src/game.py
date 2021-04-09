@@ -1,10 +1,10 @@
-import pygame
+'''Game loop for Another Pong Clone Again'''
 import random
+import pygame
 from wait import Wait
 
 class Game():
-    def __init__(self, FPS, render, score, ball, bat1, bat2, display, clock, scr_width, scr_height):
-        self.FPS = FPS
+    def __init__(self, render, score, ball, bat1, bat2, display, clock, scr_width, scr_height):
         self.render = render
         self.bat1 = bat1
         self.bat2 = bat2
@@ -16,73 +16,72 @@ class Game():
         self.scr_height = scr_height
         self.wait = Wait()
         self.running = True
-        
-        
+
     def launch(self, player):
-        
         if player != 0:
             self.running = self.wait.wait(player)
-        yVelocity = random.randint(-4, 5)
-        xVelocity = random.randint(1, 5)
-        
+        y_velocity = random.randint(-4, 5)
+        x_velocity = random.randint(2, 6)
+
         if player == 0:
             if random.randint(1, 3) == 2:
                 player = 2
-                
+
         if player == 2:
-            xVelocity = xVelocity * -1
+            x_velocity = x_velocity * -1
             xpos = self.scr_width - 80
         else:
             xpos = 80
-        
+
         ypos = random.randint(20, self.scr_height - 65)
-        self.ball.setPosition(xpos, ypos)
-        self.ball.setVelocity(xVelocity, yVelocity)
-        
-        
-    def main(self):
+        self.ball.set_position(xpos, ypos)
+        self.ball.set_velocity(x_velocity, y_velocity)
+
+    def main(self, fps):
+        '''Game main loop'''
         self.running = True
         p1_score = 0
         p2_score = 0
         self.launch(0)
-        
+
         while self.running:
-            self.clock.tick(self.FPS)
+            self.clock.tick(fps)
             for event in pygame.event.get():
                 keys = pygame.key.get_pressed()
-                if keys[pygame.K_q]:
-                    self.bat1.moveUp()
-                if keys[pygame.K_z]:
-                    self.bat1.moveDown()
-                if keys[pygame.K_UP]:
-                    self.bat2.moveUp()
-                if keys[pygame.K_DOWN]:
-                    self.bat2.moveDown()            
-                if event.type == pygame.QUIT:
+                if keys[pygame.K_q]:            # pylint: disable=no-member
+                    self.bat1.move_up()
+                if keys[pygame.K_z]:            # pylint: disable=no-member
+                    self.bat1.move_down()
+                if keys[pygame.K_UP]:           # pylint: disable=no-member
+                    self.bat2.move_up()
+                if keys[pygame.K_DOWN]:         # pylint: disable=no-member
+                    self.bat2.move_down()
+                if event.type == pygame.QUIT:   # pylint: disable=no-member
                     self.running = False
-                
-            if pygame.sprite.collide_rect(self.ball, self.bat1) or pygame.sprite.collide_rect(self.ball, self.bat2):
-                x = random.randint(0, 2)
-                y = random.randint(-1, 2)
-                xvel = self.ball.getXvelocity()
-                yvel = self.ball.getYvelocity()
+
+            if pygame.sprite.collide_rect(self.ball, self.bat1) or \
+                pygame.sprite.collide_rect(self.ball, self.bat2):
+                x_acc = random.randint(0, 2)
+                y_acc = random.randint(-1, 2)
+                xvel = self.ball.get_x_velocity()
+                yvel = self.ball.get_y_velocity()
                 if pygame.sprite.collide_rect(self.ball, self.bat1):
-                    self.ball.setPosition(26, self.ball.rect.y)
+                    self.ball.set_position(26, self.ball.rect.y)
                 else:
-                    self.ball.setPosition(self.scr_width - 66, self.ball.rect.y)
-                    if -xvel + x == 0:
+                    self.ball.set_position(self.scr_width - 66, self.ball.rect.y)
+                    if -xvel + x_acc == 0:
                         xvel = xvel + 1
-                self.ball.setVelocity(-xvel + x, yvel + y)
-                
+                self.ball.set_velocity(-xvel + x_acc, yvel + y_acc)
+
             if self.ball.rect.x < -20:
                 p2_score += 1
                 self.launch(1)
-                    
+
             if self.ball.rect.x > self.scr_width:
                 p1_score += 1
                 self.launch(2)
-                
-            self.ball.update()        
+
+            self.ball.update()
             self.render.update()
             self.score.scores(p1_score, p2_score)
             pygame.display.update()
