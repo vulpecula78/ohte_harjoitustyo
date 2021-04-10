@@ -1,5 +1,6 @@
 '''Another Pong Clone Again'''
 
+import os
 import pygame
 from bat import Bat
 from ball import Ball
@@ -9,6 +10,7 @@ from screen_render import ScreenRender
 
 FPS = 120
 GREEN = (0, 255, 0)
+dirname = os.path.dirname(__file__)
 
 def main():
     scr_width = 800
@@ -20,7 +22,7 @@ def main():
     screen = pygame.display.set_mode((scr_width, scr_height))
     pygame.display.set_caption("APCA")
 
-    background = pygame.image.load("assets/background1.png")
+    background = pygame.image.load(os.path.join(dirname, "assets", "background1.png"))
     all_sprites = pygame.sprite.Group()
 
     bat1 = Bat(5, 300, scr_width, scr_height)

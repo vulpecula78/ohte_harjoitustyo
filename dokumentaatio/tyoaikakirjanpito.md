@@ -10,3 +10,6 @@
 |  5.4 | 1,5    |Pallon, mailojen ja kentän grafiikat   |
 |  8.4 | 6,0    |Pääohjelman, game loopin, screen_render ja score.py ensimmäiset versiot.|
 |  9.4 | 3,0    |Wait.py ensimmäinen versio, gamy.py korjauksia |
+|  9.4 | 4,0    |pylintin ehdottamia korjauksia ja säätöjä  |
+| 10.4 | 2,0    |poetry invoke, hakemistorakenteen korjaus, testien korjauksia, ball testien aloitus |
+
