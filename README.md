@@ -1,17 +1,59 @@
 # Ohjemointitekniikan harjoitustyö
 
-## Tehtävät
+## APCA eli Another pong clone again
 
-### Viikko 1 
+Sovellus on klassisen pong pelin klooni. Pelissä pelaajat ohjaavat mailoja, joilla he koittavat pitää pallon kentällä. Mikäli pallo lentää vastustajan päästä ulos, saa pelaaja pisteen. Peli on vielä keskeneräinen, mutta pelattavissa.
 
- 1. [komentorivi.txt](https://github.com/vulpecula78/ohte_harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt)
- 1. [gitlog.txt](https://github.com/vulpecula78/ohte_harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
+### Pelin asennus
+Suorita riippuvuuksien asennus komennolla:
 
-### Viikko 2
- 1. [kattavuusraportti.png](https://github.com/vulpecula78/ohte_harjoitustyo/blob/master/laskarit/viikko2/kattavuusraportti.png)
- 1. [Maksukortti harjoitukset](https://github.com/vulpecula78/ohte_harjoitustyo/tree/master/laskarit/viikko2/maksukortti)
- 1. [Unicafe testit](https://github.com/vulpecula78/ohte_harjoitustyo/tree/master/laskarit/viikko2/unicafe/src/tests)
+```
+poetry install
+```
 
-### Harjoitustyö
- 1. [Määrittelydokumentti](https://github.com/vulpecula78/ohte_harjoitustyo/blob/master/project-pong/dokumentaatio/vaatimusmaarittely.md)
- 1. [Työaikakirjanpito](https://github.com/vulpecula78/ohte_harjoitustyo/blob/master/project-pong/dokumentaatio/tyoaikakirjanpito.md)
+Peli käynnistyy komennolla:
+
+```
+poetry run invoke start
+```
+
+### Pelaaminen
+Pelissä on tällä hetkellä mahdollisuus vain kaksinpeliin. Vasen pelaaja ohjaa mailaa näppäimistä q ja z. Oikea pelaajaa ohjaa mailaa nuolinäppäimistä. Pallon lentäessä ulos kentältä, peli pysähtyy, kunnes pelaaja, jonka päästä pallo lensi ulos, laukaisee pallon takaisin kentälle. Vasen pelaaja näppäimestä a
+ja oikea pelaaja näppäimestä nuoli vasemmalle. Pallon nopeus ja suunta voivat muuttua aina mailaan osuessaan.
+
+### Dokumentaatio
+ 1. [Pelin ohjeet](https://github.com/vulpecula78/ohte_harjoitustyo/blob/master/dokumentaatio/ohjeet.md)
+ 1. [Määrittelydokumentti](https://github.com/vulpecula78/ohte_harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+ 1. [Työaikakirjanpito](https://github.com/vulpecula78/ohte_harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
+
+### Testaus
+
+Sovelluksen testit ajetaan komennolla:
+
+```
+poetry run invoke test
+```
+
+Testiraportin tulostuu komennolla:
+
+```
+poetry run invoke coverage-report
+```
+
+Testiraportin voi myös tehdä selaimella tarkasteltavaksi komennolla:
+
+```
+poetry run invoke coverage-html
+```
+
+Tämä luo raportin hakemistoon htmlcov.
+
+```coverage-report ``` tai ```coverage-html``` suoritettaessa ei ole tarvetta suorittaa ```"poetry run invoke test"``` erikseen.
+
+### Koodin tarkastus
+
+ Pylint tarkastukset suoritetaan komennolla:
+
+```
+poetry run invoke lint
+```
