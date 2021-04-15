@@ -24,12 +24,12 @@ def main():
     pygame.display.set_caption("APCA")
     menu = Mmenu(scr_width, scr_height, screen)
     pygame.key.set_repeat(1, 2)
-    
+
     main_loop =True
     #Title screen
     while main_loop:
         action = menu.menu()
-        
+
         if action == "PvP":
             pvp(scr_width, scr_height, screen, clock)
         elif action == "quit":
@@ -45,7 +45,7 @@ def pvp(scr_width, scr_height, screen, clock):
 
     all_sprites.add(bat1)
     all_sprites.add(bat2)
-    all_sprites.add(ball)    
+    all_sprites.add(ball)
 
     score = Score(screen, scr_width, scr_height)
     render = ScreenRender(screen, all_sprites, background)

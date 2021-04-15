@@ -75,7 +75,7 @@ class Game():
 
             if self.ball.rect.x < -20:
                 p2_score += 1
-                #Player 2 wins 
+                #Player 2 wins
                 self.score.player_scores(2)
                 pygame.display.update()
                 running = self.launch(1)
