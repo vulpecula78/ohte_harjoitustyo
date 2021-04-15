@@ -19,3 +19,9 @@ class Score:
         score2.midtop = (0.72 * self.scr_width, self.scr_height - 40)
         self.screen.blit(score_p1, score1)
         self.screen.blit(score_p2, score2)
+        
+    def player_scores(self, player):
+        font = pygame.font.Font(pygame.font.match_font('arial'), 40)
+        text = font.render('Player %s Scores!!!' % player, True, self.txtcol)
+        text_rect = text.get_rect(center=(self.scr_width/2, 200))
+        self.screen.blit(text, text_rect)

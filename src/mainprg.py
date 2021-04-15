@@ -2,9 +2,11 @@
 
 import os
 import pygame
+
 from bat import Bat
 from ball import Ball
 from game import Game
+from mmenu import Mmenu
 from score import Score
 from screen_render import ScreenRender
 
@@ -18,10 +20,22 @@ def main():
 
     pygame.init()   # pylint: disable=no-member
     clock = pygame.time.Clock()
-    display = pygame.display.set_mode((scr_width, scr_height))
     screen = pygame.display.set_mode((scr_width, scr_height))
     pygame.display.set_caption("APCA")
+    menu = Mmenu(scr_width, scr_height, screen)
+    pygame.key.set_repeat(1, 2)
+    
+    main_loop =True
+    #Title screen
+    while main_loop:
+        action = menu.menu()
+        
+        if action == "PvP":
+            pvp(scr_width, scr_height, screen, clock)
+        elif action == "quit":
+            main_loop = False
 
+def pvp(scr_width, scr_height, screen, clock):
     background = pygame.image.load(os.path.join(dirname, "assets", "background1.png"))
     all_sprites = pygame.sprite.Group()
 
@@ -31,13 +45,11 @@ def main():
 
     all_sprites.add(bat1)
     all_sprites.add(bat2)
-    all_sprites.add(ball)
-
-    pygame.key.set_repeat(1, 2)
+    all_sprites.add(ball)    
 
     score = Score(screen, scr_width, scr_height)
     render = ScreenRender(screen, all_sprites, background)
-    game = Game(render, score, ball, bat1, bat2, display, clock, scr_width, scr_height)
+    game = Game(render, score, ball, bat1, bat2, clock, scr_width, scr_height)
 
     game.main(FPS)
 
