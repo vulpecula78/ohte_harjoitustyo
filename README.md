@@ -57,3 +57,5 @@ Tämä luo raportin hakemistoon htmlcov.
 ```
 poetry run invoke lint
 ```
+
+pylint: disable=no-member käytetty mmenu, mainprg ja game.py sellaisilla riveillä, joissa luetaan näppäimistöä tai hiirtä, sekä pygame.init(). Wait.py rivillä 3 pylint: disable=no-name-in-module.
