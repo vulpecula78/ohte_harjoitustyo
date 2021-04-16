@@ -12,10 +12,10 @@ class Wait:
         pygame.event.clear()
         if player == 3:
             pygame.time.delay(2000)
-            return
+            return False
 
         while True:
-            '''wait for the player launch'''
+            #wait for the player launch
             key_pressed = pygame.event.wait()
             if key_pressed.type == QUIT:
                 return False
@@ -29,7 +29,7 @@ class Wait:
     def launch(self, player, ball):
         '''Player1 = 1, player2 = 2, Player3 = computer, 0 = starting from the middle'''
         running = True
-        if player == 1 or player == 2:
+        if 1 <=  player <= 2:
             running = self.wait(player)
         y_velocity = random.randint(-4, 5)
         x_velocity = random.randint(2, 6)
@@ -37,7 +37,7 @@ class Wait:
         if player == 0:
             if random.randint(1, 3) == 2:
                 player = 2
-        if player == 2 or player == 3:
+        if 2 <= player <= 3:
             if player == 3:     #if computer player, wait for 1,5s before launch
                 pygame.time.delay(1500)
             x_velocity = x_velocity * -1

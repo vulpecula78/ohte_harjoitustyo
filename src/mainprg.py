@@ -8,10 +8,8 @@ from ball import Ball
 from game import Game
 from mmenu import Mmenu
 from score import Score
-from screen_render import ScreenRender
 
 FPS = 120
-GREEN = (0, 255, 0)
 dirname = os.path.dirname(__file__)
 
 def main():
@@ -38,9 +36,8 @@ def main():
             main_loop = False
 
 def normal_game(scr_width, scr_height, screen, clock, game_type):
-    background = pygame.image.load(os.path.join(dirname, "assets", "background1.png"))
     all_sprites = pygame.sprite.Group()
-
+    background = pygame.image.load(os.path.join(dirname, "assets", "background1.png"))
     bat1 = Bat(5, scr_height/2, scr_width, scr_height)
     bat2 = Bat(scr_width - 25, scr_height/2, scr_width, scr_height)
     ball = Ball(scr_width/2 - 20, scr_height/2 - 20, scr_width, scr_height)
@@ -50,10 +47,9 @@ def normal_game(scr_width, scr_height, screen, clock, game_type):
     all_sprites.add(ball)
 
     score = Score(screen, scr_width, scr_height)
-    render = ScreenRender(screen, all_sprites, background)
-    game = Game(render, score, ball, bat1, bat2, clock, scr_width, scr_height)
+    game = Game(score, ball, bat1, bat2, clock, scr_width, scr_height)
 
-    game.main(FPS, game_type)
+    game.main(FPS, game_type, all_sprites, background, screen)
 
 
 if __name__ == "__main__":

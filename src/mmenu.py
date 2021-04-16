@@ -16,13 +16,12 @@ class Mmenu:
     def menu(self):
         title_font = pygame.font.Font(pygame.font.match_font('arial'), 38)
         font = pygame.font.Font(pygame.font.match_font('arial'), 32)
-        height = self.scr_height
-        width = self.scr_width
-        
+        mid = self.scr_width / 2
+
         #menu item y locations
-        item_1 = height / 4
-        item_2 = height / 4 + 50
-        item_3 = height / 4 + 100
+        item_1 = self.scr_height / 4
+        item_2 = self.scr_height / 4 + 50
+        item_3 = self.scr_height / 4 + 100
 
         #Menu texts
         title = title_font.render('Another Pong Clone Again', True, TITLE)
@@ -30,10 +29,10 @@ class Mmenu:
         game_type_2 = font.render('Player1  vs. computer', True, TEXT)
         exit_game = font.render('Exit Game', True, TEXT)
         #Center texts
-        title_rect = title.get_rect(center=(width/2, height / 8))
-        game_type_1_rect = game_type_1.get_rect(center=(width/2, item_1))
-        game_type_2_rect = game_type_2.get_rect(center=(width/2, item_2))
-        exit_rect = exit_game.get_rect(center=(width/2, item_3))
+        title_rect = title.get_rect(center=(mid, self.scr_height / 8))
+        game_type_1_rect = game_type_1.get_rect(center=(mid, item_1))
+        game_type_2_rect = game_type_2.get_rect(center=(mid, item_2))
+        exit_rect = exit_game.get_rect(center=(mid, item_3))
 
         #menu loop
         while True:
@@ -44,22 +43,22 @@ class Mmenu:
 
                 #mouse click on menu item
                 if action.type == pygame.MOUSEBUTTONDOWN:   # pylint: disable=no-member
-                    if width/2 - 220 < mouse[0] < width/2 + 220 and item_1 - 20 < mouse[1] < item_1 + 20:
+                    if mid - 220 < mouse[0] < mid + 220 and item_1 - 20 < mouse[1] < item_1 + 20:
                         return "PvP"
-                    if width/2 - 220 < mouse[0] < width/2 + 220 and item_2 < mouse[1] < item_2 + 40:
+                    if mid - 220 < mouse[0] < mid + 220 and item_2 < mouse[1] < item_2 + 40:
                         return "computer"
-                    if width/2 - 220 < mouse[0] < width/2 + 220 and item_3 < mouse[1] < item_3 + 40:
+                    if mid - 220 < mouse[0] < mid + 220 and item_3 < mouse[1] < item_3 + 40:
                         return "quit"
 
             self.screen.fill((BCKGRD))
 
             #Highlight areas
-            if width/2 - 220 <= mouse[0] <= width/2 + 220 and item_1 - 20 <= mouse[1] <= item_1 + 20:
-                pygame.draw.rect(self.screen, HBUTTON, [width/2 - 220, item_1 - 20, 440, 40])
-            elif width/2 - 220 <= mouse[0] <= width/2 + 220 and item_2 - 20 <= mouse[1] <= item_2 + 20:
-                pygame.draw.rect(self.screen, HBUTTON, [width/2 - 220, item_2 - 20, 440, 40])
-            elif width/2 - 220 <= mouse[0] <= width/2 + 220 and item_3 - 20 <= mouse[1] <= item_3 + 20:
-                pygame.draw.rect(self.screen, HBUTTON, [width/2 - 220, item_3 - 20, 440, 40])
+            if mid - 220 <= mouse[0] <= mid + 220 and item_1 - 20 <= mouse[1] <= item_1 + 20:
+                pygame.draw.rect(self.screen, HBUTTON, [mid - 220, item_1 - 20, 440, 40])
+            elif mid - 220 <= mouse[0] <= mid + 220 and item_2 - 20 <= mouse[1] <= item_2 + 20:
+                pygame.draw.rect(self.screen, HBUTTON, [mid - 220, item_2 - 20, 440, 40])
+            elif mid - 220 <= mouse[0] <= mid + 220 and item_3 - 20 <= mouse[1] <= item_3 + 20:
+                pygame.draw.rect(self.screen, HBUTTON, [mid - 220, item_3 - 20, 440, 40])
 
             #update screen
             self.screen.blit(title, title_rect)

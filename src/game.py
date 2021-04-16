@@ -1,11 +1,10 @@
 '''Game loop for Another Pong Clone Again'''
 import pygame
-from computer_ai import Computer_AI
+from computer_ai import ComputerAi
 from wait import Wait
 
 class Game():
-    def __init__(self, render, score, ball, bat1, bat2, clock, scr_width, scr_height):
-        self.render = render
+    def __init__(self, score, ball, bat1, bat2, clock, scr_width, scr_height):
         self.bat1 = bat1
         self.bat2 = bat2
         self.ball = ball
@@ -15,7 +14,7 @@ class Game():
         self.scr_height = scr_height
         self.wait = Wait(scr_width, scr_height)
 
-    def main(self, fps, game_type):
+    def main(self, fps, game_type, all_sprites, background, screen):
         '''Game main loop'''
         running = True
         pvp = True
@@ -24,10 +23,10 @@ class Game():
         p2_score = 0
         self.wait.launch(0, self.ball)
         if game_type == "computer":
-            computer = Computer_AI(self.ball, self.bat2, self.scr_width)
+            computer = ComputerAi(self.ball, self.bat2, self.scr_width)
             player2 = 3
             pvp = False
-        
+
         while running:
             self.clock.tick(fps)
             for event in pygame.event.get():
@@ -43,7 +42,7 @@ class Game():
                         self.bat2.move_down()
                 if event.type == pygame.QUIT:   # pylint: disable=no-member
                     running = False
-            
+
             if not pvp:
                 computer.ai_player_move()
 
@@ -77,6 +76,7 @@ class Game():
                     running = self.wait.launch(3, self.ball)
 
             self.ball.update()
-            self.render.update()
+            screen.blit(background, (0,0))
             self.score.scores(p1_score, p2_score)
+            all_sprites.draw(screen)
             pygame.display.update()
