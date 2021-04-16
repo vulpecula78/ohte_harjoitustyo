@@ -47,33 +47,9 @@ class Game():
                 computer.ai_player_move()
 
             self.wait.collision(self.bat1, self.bat2, self.ball)
-
-            if self.ball.rect.x < -40:
-                p2_score += 1
-                #Player 2 wins if 11 pts
-                if p2_score == 3:
-                    self.score.victory(player2)
-                    self.wait.wait(player2)
-                    running = False
-                    continue
-                self.score.player_scores(2)
-                pygame.display.update()
-                running = self.wait.launch(1, self.ball)
-
-            if self.ball.rect.x > self.scr_width:
-                p1_score += 1
-                #Player 1 wins if 11 pts
-                if p1_score == 3:
-                    self.score.victory(1)
-                    self.wait.wait(1)
-                    running = False
-                    continue
-                self.score.player_scores(1)
-                pygame.display.update()
-                if pvp:
-                    running = self.wait.launch(2, self.ball)
-                else:
-                    running = self.wait.launch(3, self.ball)
+            running, p1_score = self.wait.is_p1_score(self.ball, p1_score, self.score, running, pvp)
+            running, p2_score = self.wait.is_p2_score(self.ball, p2_score, self.score, running, \
+                player2)
 
             self.ball.update()
             screen.blit(background, (0,0))

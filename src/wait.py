@@ -66,3 +66,34 @@ class Wait:
             else:
                 return
             ball.set_velocity(-xvel + x_acc, yvel + y_acc)
+
+    def is_p2_score(self, ball, p2_score, score, running, player2):
+        if ball.rect.x < -40:
+            p2_score += 1
+            #Player 2 wins if 11 pts
+            if p2_score == 3:
+                score.victory(player2)
+                self.wait(player2)
+                running = False
+                return running, p2_score
+            score.player_scores(2)
+            pygame.display.update()
+            running = self.launch(1, ball)
+        return running, p2_score
+
+    def is_p1_score(self, ball, p1_score, score, running, pvp):
+        if ball.rect.x > self.scr_width:
+            p1_score += 1
+            #Player 1 wins if 11 pts
+            if p1_score == 3:
+                score.victory(1)
+                self.wait(1)
+                running = False
+                return running, p1_score
+            score.player_scores(1)
+            pygame.display.update()
+            if pvp:
+                running = self.launch(2, ball)
+            else:
+                running = self.launch(3, ball)
+        return running, p1_score
