@@ -25,3 +25,13 @@ class Score:
         text = font.render('Player %s Scores!!!' % player, True, self.txtcol)
         text_rect = text.get_rect(center=(self.scr_width/2, 200))
         self.screen.blit(text, text_rect)
+
+    def victory(self, player):
+        font = pygame.font.Font(pygame.font.match_font('arial'), 44)
+        if player != 3:
+            text = font.render('PLAYER %s WINS!!!' % player, True, (255, 215, 0))
+        else:
+            text = font.render('COMPUTER WINS!!!', True, (255, 215, 0))
+        text_rect = text.get_rect(center=(self.scr_width/2, 200))
+        self.screen.blit(text, text_rect)
+        pygame.display.update()

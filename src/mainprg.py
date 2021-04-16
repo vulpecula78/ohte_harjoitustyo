@@ -31,17 +31,19 @@ def main():
         action = menu.menu()
 
         if action == "PvP":
-            pvp(scr_width, scr_height, screen, clock)
+            normal_game(scr_width, scr_height, screen, clock, "pvp")
+        elif action =="computer":
+            normal_game(scr_width, scr_height, screen, clock, "computer")
         elif action == "quit":
             main_loop = False
 
-def pvp(scr_width, scr_height, screen, clock):
+def normal_game(scr_width, scr_height, screen, clock, game_type):
     background = pygame.image.load(os.path.join(dirname, "assets", "background1.png"))
     all_sprites = pygame.sprite.Group()
 
-    bat1 = Bat(5, 300, scr_width, scr_height)
-    bat2 = Bat(775, 300,scr_width, scr_height)
-    ball = Ball(400, 300, scr_width, scr_height)
+    bat1 = Bat(5, scr_height/2, scr_width, scr_height)
+    bat2 = Bat(scr_width - 25, scr_height/2, scr_width, scr_height)
+    ball = Ball(scr_width/2 - 20, scr_height/2 - 20, scr_width, scr_height)
 
     all_sprites.add(bat1)
     all_sprites.add(bat2)
@@ -51,7 +53,7 @@ def pvp(scr_width, scr_height, screen, clock):
     render = ScreenRender(screen, all_sprites, background)
     game = Game(render, score, ball, bat1, bat2, clock, scr_width, scr_height)
 
-    game.main(FPS)
+    game.main(FPS, game_type)
 
 
 if __name__ == "__main__":

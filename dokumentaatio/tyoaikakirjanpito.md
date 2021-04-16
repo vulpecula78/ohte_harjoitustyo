@@ -13,3 +13,6 @@
 |  9.4 | 4,0    |pylintin ehdottamia korjauksia ja säätöjä  |
 | 10.4 | 2,0    |poetry invoke, hakemistorakenteen korjaus, testien korjauksia, ball testien aloitus |
 | 12.4 | 1,5    |Readme päivitys, peli ohjeet, testaus yliopiston etätyöpöydällä           |
+| 15.4 | 4,0    |Päävalikon lisäys, pisteen saamisesta ilmoitus     |
+| 15.4 | 2,0    |Koodin uudelleen järjestelyä luokkiin ja siistimistä pylintin mukaan.  |
+| yht. | 32,0   |   |
