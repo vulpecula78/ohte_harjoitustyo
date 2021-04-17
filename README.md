@@ -24,6 +24,7 @@ ja oikea pelaaja näppäimestä nuoli vasemmalle. Pallon nopeus ja suunta voivat
 ### Dokumentaatio
  1. [Pelin ohjeet](https://github.com/vulpecula78/ohte_harjoitustyo/blob/master/dokumentaatio/ohjeet.md)
  1. [Määrittelydokumentti](https://github.com/vulpecula78/ohte_harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+ 1. [Arkkitehtuurikuvaus](https://github.com/vulpecula78/ohte_harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
  1. [Työaikakirjanpito](https://github.com/vulpecula78/ohte_harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
 
 ### Testaus

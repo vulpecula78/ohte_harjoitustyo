@@ -1,6 +1,7 @@
 import pygame
 
 class Score:
+    '''Score class handles scoring and victory conditions'''
     def __init__(self, screen, scr_width, scr_height):
         self.screen = screen
         self.scr_width = scr_width

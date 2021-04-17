@@ -15,4 +15,6 @@
 | 12.4 | 1,5    |Readme päivitys, peli ohjeet, testaus yliopiston etätyöpöydällä           |
 | 15.4 | 4,0    |Päävalikon lisäys, pisteen saamisesta ilmoitus     |
 | 15.4 | 2,0    |Koodin uudelleen järjestelyä luokkiin ja siistimistä pylintin mukaan.  |
-| yht. | 32,0   |   |
+| 16.4 | 7,0    |Peli tietokonetta vastaan, pelin päättyminen, luokkien uudelleen järjestelyä. |
+| 17.4 | 2,0    |Luokkakaavio, score luokan hallinta game luokalle, pieniä korjauksia.     |
+| yht. | 41,0   |   |

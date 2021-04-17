@@ -3,6 +3,7 @@ import pygame
 from pygame.locals import QUIT, KEYDOWN, K_a, K_LEFT # pylint: disable=no-name-in-module
 
 class Wait:
+    '''Class for handling game events'''
     def __init__(self, scr_width,scr_height):
         self.scr_width = scr_width
         self.scr_height = scr_height
@@ -57,20 +58,21 @@ class Wait:
             y_acc = random.randint(-1, 2)
             xvel = ball.get_x_velocity()
             yvel = ball.get_y_velocity()
-            if pygame.sprite.collide_rect(ball, bat1) and ball.rect.x >= 20:
+            if pygame.sprite.collide_rect(ball, bat1) and ball.rect.x >= 15:
                 ball.set_position(26, ball.rect.y)
-            elif pygame.sprite.collide_rect(ball, bat2) and ball.rect.x < self.scr_width - 20:
+            elif pygame.sprite.collide_rect(ball, bat2) and ball.rect.x < self.scr_width - 55:
                 ball.set_position(self.scr_width - 66, ball.rect.y)
                 if -xvel + x_acc == 0:
                     xvel = xvel + 1
             else:
                 return
             ball.set_velocity(-xvel + x_acc, yvel + y_acc)
+            print(xvel, " ja ", yvel)
 
     def is_p2_score(self, ball, p2_score, score, running, player2):
         if ball.rect.x < -40:
             p2_score += 1
-            #Player 2 wins if 11 pts
+            #Player 2 wins if xx pts
             if p2_score == 3:
                 score.victory(player2)
                 self.wait(player2)
@@ -84,7 +86,7 @@ class Wait:
     def is_p1_score(self, ball, p1_score, score, running, pvp):
         if ball.rect.x > self.scr_width:
             p1_score += 1
-            #Player 1 wins if 11 pts
+            #Player 1 wins if xx pts
             if p1_score == 3:
                 score.victory(1)
                 self.wait(1)

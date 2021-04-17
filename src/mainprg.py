@@ -46,11 +46,8 @@ def normal_game(scr_width, scr_height, screen, clock, game_type):
     all_sprites.add(bat2)
     all_sprites.add(ball)
 
-    score = Score(screen, scr_width, scr_height)
-    game = Game(score, ball, bat1, bat2, clock, scr_width, scr_height)
-
+    game = Game(ball, bat1, bat2, clock, scr_width, scr_height)
     game.main(FPS, game_type, all_sprites, background, screen)
-
 
 if __name__ == "__main__":
     main()
