@@ -2,7 +2,7 @@ import random
 import pygame
 from pygame.locals import QUIT, KEYDOWN, K_a, K_LEFT # pylint: disable=no-name-in-module
 
-class Wait:
+class Wait: #This class will be renamed later.
     '''Class for handling game events'''
     def __init__(self, scr_width,scr_height):
         self.scr_width = scr_width
@@ -67,7 +67,6 @@ class Wait:
             else:
                 return
             ball.set_velocity(-xvel + x_acc, yvel + y_acc)
-            print(xvel, " ja ", yvel)
 
     def is_p2_score(self, ball, p2_score, score, running, player2):
         if ball.rect.x < -40:

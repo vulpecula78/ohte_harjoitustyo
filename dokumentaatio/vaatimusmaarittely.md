@@ -8,18 +8,19 @@
 ### Pelitavat:
   
     - Kaksinpeli: Player vs. player
+    - Peli tietokonetta vastaan.
     - Yksinpeli : Against the wall
     
 ## Käyttöliittymä
 
- Pelissä on päävalikko, pelikentät kaksin- ja yksinpelille. Yksinpelissä pelaaja ohjaa mailaa näppäimillä q ja z, kaksinpelissä toinen pelaaja ohjaa mailaa nuolinäppäimillä.
+ Pelissä on päävalikko[tehty], pelikentät kaksin- ja yksinpelille. Yksinpelissä ja tietokonetta vastaan pelatessa pelaaja ohjaa mailaa näppäimillä q ja z, kaksinpelissä toinen pelaaja ohjaa mailaa nuolinäppäimillä.
  
 ## Jatkokehitys
  
   Perustoiminnallisuuksien jälkeen, mahdollisuuksien rajoissa, lisätään muita ominaisuuksia:
   
     - Lyönti eteenpäin: pelaaja voi pallon osuessa mailaa lyödä palloa, lisäten pallon horisontaalista vauhtia. 
-    - Pelaaminen tietokonetta vastaan.
+    - Pelaaminen tietokonetta vastaan. [Tehty]
     - Äänet
     - Yksinpelin piste-ennätys
     - Vaikeus asetuksia, käyttöliittymään asetukset valikko.

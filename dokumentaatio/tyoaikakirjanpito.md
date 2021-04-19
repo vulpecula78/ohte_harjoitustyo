@@ -17,4 +17,5 @@
 | 15.4 | 2,0    |Koodin uudelleen järjestelyä luokkiin ja siistimistä pylintin mukaan.  |
 | 16.4 | 7,0    |Peli tietokonetta vastaan, pelin päättyminen, luokkien uudelleen järjestelyä. |
 | 17.4 | 2,0    |Luokkakaavio, score luokan hallinta game luokalle, pieniä korjauksia.     |
-| yht. | 41,0   |   |
+| 19.4 | 2,0    |Unittestejä, dokumentaatio päivityksiä |
+| yht. | 43,0   |   |

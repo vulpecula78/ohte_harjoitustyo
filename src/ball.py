@@ -46,4 +46,5 @@ class Ball(pygame.sprite.Sprite):
             self.rect.y = self.scr_height - 85
             self.y_velocity = -(self.y_velocity)
         if self.rect.top <= 0:
+            self.rect.y = 0
             self.y_velocity = -(self.y_velocity)

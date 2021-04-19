@@ -2,7 +2,7 @@
 
 ## APCA eli Another pong clone again
 
-Sovellus on klassisen pong pelin klooni. Pelissä pelaajat ohjaavat mailoja, joilla he koittavat pitää pallon kentällä. Mikäli pallo lentää vastustajan päästä ulos, saa pelaaja pisteen. Peli on vielä keskeneräinen, mutta pelattavissa.
+Sovellus on klassisen pong pelin klooni. Pelissä pelaajat ohjaavat mailoja, joilla he koittavat pitää pallon kentällä. Mikäli pallo lentää vastustajan päästä ulos, saa pelaaja pisteen. Voit pelata kaksin peliä tai tietokonetta vastaan. Tietokone on tällä hetkellä asetettu helpoksi.
 
 ### Pelin asennus
 Suorita riippuvuuksien asennus komennolla:
@@ -18,8 +18,7 @@ poetry run invoke start
 ```
 
 ### Pelaaminen
-Pelissä on tällä hetkellä mahdollisuus vain kaksinpeliin. Vasen pelaaja ohjaa mailaa näppäimistä q ja z. Oikea pelaajaa ohjaa mailaa nuolinäppäimistä. Pallon lentäessä ulos kentältä, peli pysähtyy, kunnes pelaaja, jonka päästä pallo lensi ulos, laukaisee pallon takaisin kentälle. Vasen pelaaja näppäimestä a
-ja oikea pelaaja näppäimestä nuoli vasemmalle. Pallon nopeus ja suunta voivat muuttua aina mailaan osuessaan.
+Pelissä on tällä hetkellä mahdollisuus kaksinpeliin tai tietokonetta vastaan. Vasen pelaaja ohjaa mailaa näppäimistä q ja z. Oikea pelaajaa ohjaa mailaa nuolinäppäimistä. Tietokone on aina oikeanpuoleinen pelaaja. Pallon lentäessä ulos kentältä, peli pysähtyy, kunnes pelaaja, jonka päästä pallo lensi ulos, laukaisee pallon takaisin kentälle. Vasen pelaaja näppäimestä a ja oikea pelaaja näppäimestä nuoli vasemmalle. Pallon nopeus ja suunta voivat muuttua aina mailaan osuessaan. Peli päättyy kun jompikumpi pelaaja saa 3 pistettä. Takaisin pää valikkoon pääsee painamalla laukaisu näppäintä  (a tai nuoli vas.).
 
 ### Dokumentaatio
  1. [Pelin ohjeet](https://github.com/vulpecula78/ohte_harjoitustyo/blob/master/dokumentaatio/ohjeet.md)
@@ -35,7 +34,7 @@ Sovelluksen testit ajetaan komennolla:
 poetry run invoke test
 ```
 
-Testiraportin tulostuu komennolla:
+Testiraportti tulostuu komennolla:
 
 ```
 poetry run invoke coverage-report
@@ -59,4 +58,4 @@ Tämä luo raportin hakemistoon htmlcov.
 poetry run invoke lint
 ```
 
-pylint: disable=no-member käytetty mmenu, mainprg ja game.py sellaisilla riveillä, joissa luetaan näppäimistöä tai hiirtä, sekä pygame.init(). Wait.py rivillä 3 pylint: disable=no-name-in-module.
+pylint: disable=no-member käytetty mmenu, mainprg ja game.py sellaisilla riveillä, joissa luetaan näppäimistöä tai hiirtä, sekä pygame.init(). Wait.py rivillä 3 pylint: disable=no-name-in-module. Pylint ei nähtävästi osaa käsitellä näitä rivejä.
