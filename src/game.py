@@ -25,7 +25,7 @@ class Game():
         self.wait.launch(0, self.ball)
         if game_type == "computer":
             computer = ComputerAi(self.ball, self.bat2, self.scr_width)
-            player2 = 3
+            player2 = 3     #Set player2 to computer player.
             pvp = False
 
         while running:
@@ -49,8 +49,7 @@ class Game():
 
             self.wait.collision(self.bat1, self.bat2, self.ball)
             running, p1_score = self.wait.is_p1_score(self.ball, p1_score, score, running, pvp)
-            running, p2_score = self.wait.is_p2_score(self.ball, p2_score, score, running, \
-                player2)
+            running, p2_score = self.wait.is_p2_score(self.ball, p2_score, score, running, player2)
 
             self.ball.update()
             screen.blit(background, (0,0))

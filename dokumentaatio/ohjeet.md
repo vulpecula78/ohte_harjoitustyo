@@ -12,6 +12,9 @@ Peli käynnistyy komennolla:
 
 ```poetry run invoke start```
 
+### päävalikko
+Päävalikossa valitaan hiirellä kaksinpeli, peli tietokonetta vastaan tai poistutaan pelistä.
+
 ### Pelaaminen
 Pelaajan 1 (vasen pelaaja) näppäimet:
 
@@ -25,6 +28,6 @@ Pelaajan 2 (oikea pelaaja) näppäimet:
  - Nuoli alas - liikuta mailaa alaspäin.
  - Nuoli vasen - laukaise pallo.
  
- Tällä hetkellä peli alkaa heti kun se käynnistetään. Pallon päästessä ulos kentältä peli pysähtyy, kunnes pelaaja, jonka päästä pallo karkasi, laukaisee pallon takaisin peliin. Pelin päätyttyä, päävalikkoon palaudutaan, kun voittanut pelaaja painaa pallon laukaisu näppäintä. Tietokoneen voittaessa palaudutaan päävalikkoon 3s kuluessa.
+ Tällä hetkellä peli alkaa heti kun se käynnistetään. Pallon päästessä ulos kentältä peli pysähtyy, kunnes pelaaja, jonka päästä pallo karkasi, laukaisee pallon takaisin peliin. Pelin päätyttyä, päävalikkoon palaudutaan, kun voittanut pelaaja painaa pallon laukaisunappia. Tietokoneen voittaessa palaudutaan päävalikkoon 3s kuluessa.
  
 

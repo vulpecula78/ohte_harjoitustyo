@@ -18,7 +18,7 @@ poetry run invoke start
 ```
 
 ### Pelaaminen
-Pelissä on tällä hetkellä mahdollisuus kaksinpeliin tai tietokonetta vastaan. Vasen pelaaja ohjaa mailaa näppäimistä q ja z. Oikea pelaajaa ohjaa mailaa nuolinäppäimistä. Tietokone on aina oikeanpuoleinen pelaaja. Pallon lentäessä ulos kentältä, peli pysähtyy, kunnes pelaaja, jonka päästä pallo lensi ulos, laukaisee pallon takaisin kentälle. Vasen pelaaja näppäimestä a ja oikea pelaaja näppäimestä nuoli vasemmalle. Pallon nopeus ja suunta voivat muuttua aina mailaan osuessaan. Peli päättyy kun jompikumpi pelaaja saa 3 pistettä. Takaisin pää valikkoon pääsee painamalla laukaisu näppäintä  (a tai nuoli vas.).
+Pelissä on tällä hetkellä mahdollisuus kaksinpeliin tai tietokonetta vastaan. Vasen pelaaja ohjaa mailaa näppäimistä q ja z. Oikea pelaajaa ohjaa mailaa nuolinäppäimistä. Tietokone on aina oikeanpuoleinen pelaaja. Pallon lentäessä ulos kentältä, peli pysähtyy, kunnes pelaaja, jonka päästä pallo lensi ulos, laukaisee pallon takaisin kentälle. Vasen pelaaja näppäimestä a ja oikea pelaaja näppäimestä nuoli vasemmalle. Pallon nopeus ja suunta voivat muuttua aina mailaan osuessaan. Peli päättyy kun jompikumpi pelaaja saa 3 pistettä. Takaisin päävalikkoon pääsee painamalla laukaisunappia (a tai nuoli vas.).
 
 ### Dokumentaatio
  1. [Pelin ohjeet](https://github.com/vulpecula78/ohte_harjoitustyo/blob/master/dokumentaatio/ohjeet.md)

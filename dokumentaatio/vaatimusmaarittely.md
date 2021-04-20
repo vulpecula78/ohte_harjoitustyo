@@ -13,7 +13,7 @@
     
 ## Käyttöliittymä
 
- Pelissä on päävalikko[tehty], pelikentät kaksin- ja yksinpelille. Yksinpelissä ja tietokonetta vastaan pelatessa pelaaja ohjaa mailaa näppäimillä q ja z, kaksinpelissä toinen pelaaja ohjaa mailaa nuolinäppäimillä.
+ Pelissä on päävalikko[tehty], josta valitaan pelitapa. Pelissä on pelikentät kaksin- ja yksinpelille. Yksinpelissä ja tietokonetta vastaan pelatessa pelaaja ohjaa mailaa näppäimillä q ja z, kaksinpelissä toinen pelaaja ohjaa mailaa nuolinäppäimillä.
  
 ## Jatkokehitys
  
