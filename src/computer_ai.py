@@ -10,7 +10,7 @@ class ComputerAi:
         if self.ball.rect.x > self.scr_width / 2 - 50 and self.ball.get_x_velocity() > 0:
             if self.ball.rect.y >= self.bat.rect.y + 50:
                 self.bat.move_down()
-                #self.bat.move_down()
+                self.bat.move_down()
             if self.ball.rect.y < self.bat.rect.y + 50:
                 self.bat.move_up()
-                #self.bat.move_up()
+                self.bat.move_up()

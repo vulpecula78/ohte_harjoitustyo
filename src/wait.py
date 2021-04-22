@@ -33,7 +33,7 @@ class Wait: #This class will be renamed later.
         if 1 <=  player <= 2:
             running = self.wait(player)
         y_velocity = random.randint(-4, 5)
-        x_velocity = random.randint(2, 6)
+        x_velocity = random.randint(3, 6)
 
         if player == 0:
             if random.randint(1, 3) == 2:
@@ -51,13 +51,15 @@ class Wait: #This class will be renamed later.
         ball.set_velocity(x_velocity, y_velocity)
         return running
 
-    def collision(self, bat1, bat2, ball):
+    def collision(self, bat1, bat2, ball, sound):
         '''Check collision between bats and ball'''
         if pygame.sprite.collide_rect(ball, bat1) or pygame.sprite.collide_rect(ball, bat2):
             x_acc = random.randint(0, 2)
             y_acc = random.randint(-1, 2)
             xvel = ball.get_x_velocity()
             yvel = ball.get_y_velocity()
+            if sound is not None:
+                sound.bat_sound()
             if pygame.sprite.collide_rect(ball, bat1) and ball.rect.x >= 15:
                 ball.set_position(26, ball.rect.y)
             elif pygame.sprite.collide_rect(ball, bat2) and ball.rect.x < self.scr_width - 55:
@@ -68,9 +70,39 @@ class Wait: #This class will be renamed later.
                 return
             ball.set_velocity(-xvel + x_acc, yvel + y_acc)
 
-    def is_p2_score(self, ball, p2_score, score, running, player2):
+    def collision_wall(self, ball, bat1, p1_score, sound):
+        if pygame.sprite.collide_rect(ball, bat1) and ball.rect.x >= 15:
+            y_acc = random.randint(-2, 2)
+            xvel = ball.get_x_velocity() - random.randint(-1, 2)
+            yvel = ball.get_y_velocity() - (1 + y_acc)
+            if sound is not None:
+                sound.bat_sound()
+            if xvel < -10:
+                xvel = -10
+            if ball.rect.x >= 15:
+                ball.set_position(26, ball.rect.y)
+            ball.set_velocity(-xvel, yvel)
+            p1_score += 1
+        elif ball.rect.x > 0.75 * self.scr_width - 45:
+            ball.set_position(0.75 * self.scr_width - 45, ball.rect.y)
+            xvel = ball.get_x_velocity() * -1
+            ball.set_velocity(xvel, ball.get_y_velocity())
+            if sound is not None:
+                sound.bat_sound()
+        return p1_score
+
+    def ball_on_table(self, ball, score, p1_score, hi_score):
+        if ball.rect.x < -40:
+            high = score.wall_game_over(p1_score)
+            self.wait(1)
+            return False, high
+        return True, hi_score
+
+    def is_p2_score(self, ball, p2_score, score, running, player2, sound):
         if ball.rect.x < -40:
             p2_score += 1
+            if sound is not None:
+                sound.cheer_sound()
             #Player 2 wins if xx pts
             if p2_score == 3:
                 score.victory(player2)
@@ -82,9 +114,11 @@ class Wait: #This class will be renamed later.
             running = self.launch(1, ball)
         return running, p2_score
 
-    def is_p1_score(self, ball, p1_score, score, running, pvp):
+    def is_p1_score(self, ball, p1_score, score, running, pvp, sound):
         if ball.rect.x > self.scr_width:
             p1_score += 1
+            if sound is not None:
+                sound.cheer_sound()
             #Player 1 wins if xx pts
             if p1_score == 3:
                 score.victory(1)

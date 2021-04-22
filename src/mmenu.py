@@ -22,17 +22,20 @@ class Mmenu:
         item_1 = self.scr_height / 4
         item_2 = self.scr_height / 4 + 50
         item_3 = self.scr_height / 4 + 100
+        item_4 = self.scr_height / 4 + 150
 
         #Menu texts
         title = title_font.render('Another Pong Clone Again', True, TITLE)
         game_type_1 = font.render('Player1 vs. Player2', True, TEXT)
         game_type_2 = font.render('Player1  vs. computer', True, TEXT)
+        game_type_3 = font.render('Against the wall', True, TEXT)
         exit_game = font.render('Exit Game', True, TEXT)
         #Center texts
         title_rect = title.get_rect(center=(mid, self.scr_height / 8))
         game_type_1_rect = game_type_1.get_rect(center=(mid, item_1))
         game_type_2_rect = game_type_2.get_rect(center=(mid, item_2))
-        exit_rect = exit_game.get_rect(center=(mid, item_3))
+        game_type_3_rect = game_type_3.get_rect(center=(mid, item_3))
+        exit_rect = exit_game.get_rect(center=(mid, item_4))
 
         #menu loop
         while True:
@@ -45,9 +48,11 @@ class Mmenu:
                 if action.type == pygame.MOUSEBUTTONDOWN:   # pylint: disable=no-member
                     if mid - 220 < mouse[0] < mid + 220 and item_1 - 20 < mouse[1] < item_1 + 20:
                         return "PvP"
-                    if mid - 220 < mouse[0] < mid + 220 and item_2 < mouse[1] < item_2 + 40:
+                    if mid - 220 < mouse[0] < mid + 220 and item_2 - 20 < mouse[1] < item_2 + 20:
                         return "computer"
-                    if mid - 220 < mouse[0] < mid + 220 and item_3 < mouse[1] < item_3 + 40:
+                    if mid - 220 < mouse[0] < mid + 220 and item_3 - 20 < mouse[1] < item_3 + 20:
+                        return "wall"
+                    if mid - 220 < mouse[0] < mid + 220 and item_4 - 20 < mouse[1] < item_4 + 20:
                         return "quit"
 
             self.screen.fill((BCKGRD))
@@ -59,10 +64,13 @@ class Mmenu:
                 pygame.draw.rect(self.screen, HBUTTON, [mid - 220, item_2 - 20, 440, 40])
             elif mid - 220 <= mouse[0] <= mid + 220 and item_3 - 20 <= mouse[1] <= item_3 + 20:
                 pygame.draw.rect(self.screen, HBUTTON, [mid - 220, item_3 - 20, 440, 40])
+            elif mid - 220 <= mouse[0] <= mid + 220 and item_4 - 20 <= mouse[1] <= item_4 + 20:
+                pygame.draw.rect(self.screen, HBUTTON, [mid - 220, item_4 - 20, 440, 40])
 
             #update screen
             self.screen.blit(title, title_rect)
             self.screen.blit(game_type_1, game_type_1_rect)
             self.screen.blit(game_type_2, game_type_2_rect)
+            self.screen.blit(game_type_3, game_type_3_rect)
             self.screen.blit(exit_game, exit_rect)
             pygame.display.update()

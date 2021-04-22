@@ -18,4 +18,5 @@
 | 16.4 | 7,0    |Peli tietokonetta vastaan, pelin päättyminen, luokkien uudelleen järjestelyä. |
 | 17.4 | 2,0    |Luokkakaavio, score luokan hallinta game luokalle, pieniä korjauksia.     |
 | 19.4 | 2,0    |Unittestejä, dokumentaatio päivityksiä |
-| yht. | 43,0   |   |
+| 22.4 | 7,0    |Added against the wall game mode, added sound effects           |
+| yht. | 50,0   |   |
