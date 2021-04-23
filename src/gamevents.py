@@ -1,6 +1,6 @@
 import random
 import pygame
-from pygame.locals import QUIT, KEYDOWN, K_d, K_LEFT # pylint: disable=no-name-in-module
+from pygame.locals import QUIT, KEYDOWN, K_s, K_LEFT # pylint: disable=no-name-in-module
 
 class Gamevents:
     '''Class for handling game events'''
@@ -22,7 +22,7 @@ class Gamevents:
             if key_pressed.type == QUIT:
                 return False
             if key_pressed.type == KEYDOWN and player == 1:
-                if key_pressed.key == K_d:
+                if key_pressed.key == K_s:
                     return True
             if key_pressed.type == KEYDOWN and player == 2:
                 if key_pressed.key == K_LEFT:

@@ -43,11 +43,11 @@ class Game():
             hit = False
             for event in pygame.event.get():
                 keys = pygame.key.get_pressed()
-                if keys[pygame.K_w]:            # pylint: disable=no-member
+                if keys[pygame.K_q]:            # pylint: disable=no-member
                     self.bat1.move_up()
-                if keys[pygame.K_s]:            # pylint: disable=no-member
+                if keys[pygame.K_a]:            # pylint: disable=no-member
                     self.bat1.move_down()
-                if keys[pygame.K_d] and not wall:   # pylint: disable=no-member
+                if keys[pygame.K_s] and not wall:   # pylint: disable=no-member
                     self.bat1.hit()
                     hit = True
                 if pvp:
