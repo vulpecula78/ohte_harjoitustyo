@@ -26,11 +26,27 @@ class Bat(pygame.sprite.Sprite):
 
     def move_up(self):
         '''Moves bat up by 2 pixels, until y position is 0'''
+        self._reset_x()
         if self.rect.top > 1:
             self.rect.y -= 2
 
     def move_down(self):
         '''Moves bat down by 2 pixels until y position is screen height - 145
             (100 from bat, 45 from score area)'''
+        self._reset_x()
         if self.rect.top < self.scr_height - 145:
             self.rect.y += 2
+
+    def hit(self):
+        '''Moves bat forward to hit the ball.'''
+        if self.rect.x == 5:
+            self.rect.x = 25
+        if self.rect.x == self.scr_width - 25:
+            self.rect.x = self.scr_width - 45
+
+    def _reset_x(self):
+        '''Reset the x position of the bat.'''
+        if self.rect.x == 25:
+            self.rect.x = 5
+        if self.rect.x == self.scr_width - 45:
+            self.rect.x = self.scr_width - 25

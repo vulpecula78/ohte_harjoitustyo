@@ -49,8 +49,8 @@ def normal_game(scr_width, scr_height, screen, clock, game_type):
     all_sprites.add(ball)
 
     game = Game(ball, bat1, bat2, clock, scr_width, scr_height, True) #Add sound True or False
-    game.main(FPS, game_type, all_sprites, background, screen, 0)    #Change 0 to hiscore
-    
+    game.main(FPS, game_type, all_sprites, background, screen, 0)
+
 def against_wall(scr_width, scr_height, screen, clock, game_type, hi_score):
     background = pygame.image.load(os.path.join(dirname, "assets", "background2.png"))
     bat1 = Bat(5, scr_height/2, scr_width, scr_height)
@@ -59,9 +59,9 @@ def against_wall(scr_width, scr_height, screen, clock, game_type, hi_score):
     all_sprites.add(bat1)
     all_sprites.add(ball)
     game = Game(ball, bat1, None, clock, scr_width, scr_height, True) #Add sound True or False
-    hi_score = game.main(FPS, game_type, all_sprites, background, screen, hi_score)    #Change 0 to hiscore
+    hi_score = game.main(FPS, game_type, all_sprites, background, screen, hi_score)
     return hi_score
 
-    
+
 if __name__ == "__main__":
     main()

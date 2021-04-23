@@ -22,8 +22,10 @@ class Ball(pygame.sprite.Sprite):
 
     def set_velocity(self, xvel, yvel):
         '''Set balls velocity with x and y component.'''
-        self.x_velocity = xvel
-        self.y_velocity = yvel
+        if -11 < xvel < 11:
+            self.x_velocity = xvel
+        if -11 < yvel < 11:
+            self.y_velocity = yvel
 
     def set_position(self, x_pos, y_pos):
         '''Set ball position with given x and y coordinate.'''
