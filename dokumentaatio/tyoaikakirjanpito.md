@@ -19,4 +19,5 @@
 | 17.4 | 2,0    |Luokkakaavio, score luokan hallinta game luokalle, pieniä korjauksia.     |
 | 19.4 | 2,0    |Unittestejä, dokumentaatio päivityksiä |
 | 22.4 | 7,0    |Added against the wall game mode, added sound effects           |
-| yht. | 50,0   |   |
+| 24.4 | 6,0    |Sekvenssikaavio, testejä, score ja mmenu ui luokkaan   |
+| yht. | 56,0   |   |

@@ -1,6 +1,6 @@
 '''Game loop for Another Pong Clone Again'''
 import pygame
-from score  import Score
+from ui.score  import Score
 from computer_ai import ComputerAi
 from gamevents import Gamevents
 from sound_effects import SoundEffects

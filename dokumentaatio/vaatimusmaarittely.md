@@ -7,22 +7,22 @@
  
 ### Pelitavat:
   
-    - Kaksinpeli: Player vs. player
-    - Peli tietokonetta vastaan.
-    - Yksinpeli : Against the wall
+    - Kaksinpeli: Player vs. player[tehty]
+    - Peli tietokonetta vastaan: Player vs. computer[tehty].
+    - Yksinpeli : Against the wall[tehty vk5]
     
 ## Käyttöliittymä
 
- Pelissä on päävalikko[tehty], josta valitaan pelitapa. Pelissä on pelikentät kaksin- ja yksinpelille. Yksinpelissä ja tietokonetta vastaan pelatessa pelaaja ohjaa mailaa näppäimillä q ja z, kaksinpelissä toinen pelaaja ohjaa mailaa nuolinäppäimillä.
+ Pelissä on päävalikko[tehty], josta valitaan pelitapa. Pelissä on pelikentät kaksin- ja yksinpelille[tehty vk5]. Yksinpelissä ja tietokonetta vastaan pelatessa pelaaja ohjaa mailaa näppäimillä q, a ja s, kaksinpelissä toinen pelaaja ohjaa mailaa nuolinäppäimillä.
  
 ## Jatkokehitys
  
   Perustoiminnallisuuksien jälkeen, mahdollisuuksien rajoissa, lisätään muita ominaisuuksia:
   
-    - Lyönti eteenpäin: pelaaja voi pallon osuessa mailaa lyödä palloa, lisäten pallon horisontaalista vauhtia. 
+    - Lyönti eteenpäin: pelaaja voi pallon osuessa mailaa lyödä palloa, lisäten pallon horisontaalista vauhtia. [tehty vk5]
     - Pelaaminen tietokonetta vastaan. [Tehty]
-    - Äänet
-    - Yksinpelin piste-ennätys
+    - Äänet[tehty vk5]
+    - Yksinpelin piste-ennätys[tehty, osittain vk5]
     - Vaikeus asetuksia, käyttöliittymään asetukset valikko.
     - Mahdollisuus lyödä palloa ala- ja yläviistoon.
     - Pelikentälle ilmestyviä yllätyksiä, jotka vaikuttavat pallon tai mailan liikkeisiin

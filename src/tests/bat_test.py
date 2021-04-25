@@ -41,3 +41,23 @@ class TestBat(unittest.TestCase):
         self.bat.move_down()
         self.bat.move_down()
         self.assertEqual((self.bat.rect.y), 455)
+
+    def test_vasen_maila_liikkuu_eteen_kun_lyo(self):
+        self.bat.hit()
+        self.assertEqual((self.bat.rect.x), 25)
+        
+    def test_vasen_maila_palaa_takaisin_paikalleen(self):
+        self.bat.hit()
+        self.bat.move_up()
+        self.assertEqual((self.bat.rect.x), 5)
+        
+    def test_oikea_maila_liikkuu_eteen_kun_lyo(self):
+        self.bat.rect.x = 775
+        self.bat.hit()
+        self.assertEqual((self.bat.rect.x), 755)
+        
+    def test_oikea_maila_palaa_takaisin_paikalleen(self):
+        self.bat.rect.x = 775
+        self.bat.hit()
+        self.bat.move_up()
+        self.assertEqual((self.bat.rect.x), 775)

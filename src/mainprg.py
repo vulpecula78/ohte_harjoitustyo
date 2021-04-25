@@ -6,7 +6,7 @@ import pygame
 from bat import Bat
 from ball import Ball
 from game import Game
-from mmenu import Mmenu
+from ui.mmenu import Mmenu
 
 FPS = 120
 dirname = os.path.dirname(__file__)
