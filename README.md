@@ -5,6 +5,13 @@
 Sovellus on klassisen pong pelin klooni. Pelissä pelaajat ohjaavat mailoja, joilla he koittavat pitää pallon kentällä. Mikäli pallo lentää vastustajan päästä ulos, saa pelaaja pisteen. Voit pelata kaksin peliä tai tietokonetta vastaan. Tietokone on tällä hetkellä asetettu helpoksi.
 
 ### Pelin asennus
+
+Lataa uusin julkaisu: 
+
+ - [Viikko5 release](https://github.com/vulpecula78/ohte_harjoitustyo/releases/tag/Viikko5)
+ 
+tai kloonaa repositoria.
+
 Suorita riippuvuuksien asennus komennolla:
 
 ```
@@ -16,6 +23,8 @@ Peli käynnistyy komennolla:
 ```
 poetry run invoke start
 ```
+
+Sovellus on tehty ja testattu python 3.8.8 versiolla. 
 
 ### Pelaaminen
 Pelissä on tällä hetkellä mahdollisuus kaksinpeliin tai tietokonetta vastaan. Vasen pelaaja ohjaa mailaa näppäimistä q ja z. Oikea pelaajaa ohjaa mailaa nuolinäppäimistä. Tietokone on aina oikeanpuoleinen pelaaja. Pallon lentäessä ulos kentältä, peli pysähtyy, kunnes pelaaja, jonka päästä pallo lensi ulos, laukaisee pallon takaisin kentälle. Vasen pelaaja näppäimestä a ja oikea pelaaja näppäimestä nuoli vasemmalle. Pallon nopeus ja suunta voivat muuttua aina mailaan osuessaan. Peli päättyy kun jompikumpi pelaaja saa 3 pistettä. Takaisin päävalikkoon pääsee painamalla laukaisunappia (a tai nuoli vas.).
