@@ -13,7 +13,7 @@
     
 ## Käyttöliittymä
 
- Pelissä on päävalikko[tehty], josta valitaan pelitapa. Pelissä on pelikentät kaksin- ja yksinpelille[tehty vk5]. Yksinpelissä ja tietokonetta vastaan pelatessa pelaaja ohjaa mailaa näppäimillä q, a ja s, kaksinpelissä toinen pelaaja ohjaa mailaa nuolinäppäimillä.
+ Pelissä on päävalikko[tehty], josta valitaan pelitapa. Pelissä on pelikentät kaksin- ja yksinpelille[tehty vk5]. Yksinpelissä ja tietokonetta vastaan pelatessa pelaaja ohjaa mailaa näppäimillä q, a ja s, kaksinpelissä toinen pelaaja ohjaa mailaa nuolinäppäimillä. Pallon osuessa mailaan, sen suunta ja nopeus hieman muuttuu satunnaisesti.
  
 ## Jatkokehitys
  
