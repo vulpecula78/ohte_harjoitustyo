@@ -1,7 +1,7 @@
 screen width: 
-800
+640
 screen height: 
-600
+480
 sounds: 
 True
 ai level: 

@@ -113,7 +113,7 @@ class Gamevents:
             if sound is not None:
                 sound.cheer_sound()
             #Player 2 wins if xx pts
-            if p2_score == 3:
+            if p2_score == 5:
                 score.victory(player2)
                 self.wait(player2)
                 running = False
@@ -130,7 +130,7 @@ class Gamevents:
             if sound is not None:
                 sound.cheer_sound()
             #Player 1 wins if xx pts
-            if p1_score == 3:
+            if p1_score == 5:
                 score.victory(1)
                 self.wait(1)
                 running = False

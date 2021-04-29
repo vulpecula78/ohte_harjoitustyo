@@ -12,6 +12,6 @@ src/__pycache__/
 src/ui/__pycache__/
 src/tests/.coverage
 src/tests/__pycache__/
-
+src/settings.txt
 
 

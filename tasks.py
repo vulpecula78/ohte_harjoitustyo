@@ -2,7 +2,7 @@ from invoke import task
 
 @task
 def start(ctx):
-    ctx.run("python3 src/mainprg.py")
+    ctx.run("python3 src/apca.py")
 
 @task
 def test(ctx):
