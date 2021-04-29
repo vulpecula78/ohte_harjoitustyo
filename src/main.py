@@ -5,7 +5,7 @@ import pygame
 
 from bat import Bat
 from ball import Ball
-from game import Game
+from ui.game import Game
 from settings import Settings
 from ui.mmenu import Mmenu
 

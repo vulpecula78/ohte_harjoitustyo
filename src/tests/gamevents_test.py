@@ -45,9 +45,9 @@ class TestGamevents(unittest.TestCase):
         
     def test_tietokone_voittaa_pelin(self):
         self.ball.rect.x = -44
-        run, score = self.gamevents.is_p2_score(self.ball, 2, self.score, True, 3, None)
+        run, score = self.gamevents.is_p2_score(self.ball, 4, self.score, True, 3, None)
         self.assertEqual(run, False)
-        self.assertEqual(score, 3)
+        self.assertEqual(score, 5)
         
     def test_pallo_kimpoaa_mailasta_against_wall(self):
         self.ball.rect.x = 28

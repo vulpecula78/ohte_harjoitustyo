@@ -1,11 +1,11 @@
 screen width: 
-640
+800
 screen height: 
-480
+600
 sounds: 
-True
+False
 ai level: 
-average
+easy
 hiscore in small screen: 
 0
 hiscore in medium screen: 
