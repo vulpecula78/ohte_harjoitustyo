@@ -10,7 +10,7 @@ Lataa uusin julkaisu:
 
  - [Viikko5 release](https://github.com/vulpecula78/ohte_harjoitustyo/releases/tag/Viikko5)
  
-tai kloonaa repositoria.
+tai kloonaa repositorio.
 
 Suorita riippuvuuksien asennus komennolla:
 
