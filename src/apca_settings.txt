@@ -1,0 +1,14 @@
+screen width: 
+800
+screen height: 
+600
+sounds: 
+True
+ai level: 
+average
+hiscore in small screen: 
+0
+hiscore in medium screen: 
+0
+hiscore in large screen: 
+0

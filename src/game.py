@@ -14,7 +14,7 @@ class Game():
         self.scr_width = scr_width
         self.scr_height = scr_height
         self.events = Gamevents(scr_width, scr_height)
-        if sounds:
+        if sounds == "True":            
             self.sound = SoundEffects()
         else:
             self.sound = None
