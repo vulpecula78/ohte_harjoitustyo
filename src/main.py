@@ -4,12 +4,10 @@ import pygame
 
 from objects.bat import Bat
 from objects.ball import Ball
-from settings_rw import Settings_rw
+from settings_rw import SettingsRW
 from ui.game import Game
 from ui.mmenu import Mmenu
 
-
-FPS = 120
 dirname = os.path.dirname(__file__)
 
 class Main:
@@ -23,8 +21,9 @@ class Main:
     def main(self):
         #load settings if file exist.
         #If not, then create file.
-        settings_rw = Settings_rw()
+        settings_rw = SettingsRW()
         lsetup = settings_rw.load_settings(self.setup)
+
         #init settings
         self.scr_width = int(lsetup[0])
         self.scr_height = int(lsetup[1])
@@ -43,9 +42,9 @@ class Main:
             backgrd1 = "background1_640x480.png"
             backgrd2 = "background2_640x480.png"
         restart = False
+
         #setup screen
         pygame.init()   # pylint: disable=no-member
-        clock = pygame.time.Clock()
         screen = pygame.display.set_mode((self.scr_width, self.scr_height))
         pygame.display.set_caption("APCA")
         menu = Mmenu(self.scr_width, self.scr_height, screen)
@@ -58,11 +57,11 @@ class Main:
             action = menu.menu(lsetup)
 
             if action == "PvP":
-                self._normal_game(screen, clock, "pvp", backgrd1)
+                self._normal_game(screen, "pvp", backgrd1)
             elif action == "computer":
-                self._normal_game(screen, clock, "computer", backgrd1)
+                self._normal_game(screen, "computer", backgrd1)
             elif action == "wall":
-                hiscore = self._against_wall(screen, clock, "wall", hiscore, backgrd2)
+                hiscore = self._against_wall(screen, "wall", hiscore, backgrd2)
             elif action == "settings":
                 main_loop = False
                 restart = True
@@ -71,7 +70,7 @@ class Main:
         if restart:
             self.main()
 
-    def _normal_game(self, screen, clock, game_type, backgrd1):
+    def _normal_game(self, screen, game_type, backgrd1):
         '''2 player game or game against computer'''
         sprites = pygame.sprite.Group()
         background = pygame.image.load(os.path.join(dirname, "assets", backgrd1))
@@ -83,10 +82,10 @@ class Main:
         sprites.add(bat2)
         sprites.add(ball)
 
-        game = Game(ball, bat1, bat2, clock, self.scr_width, self.scr_height, self.sound)
-        game.main(FPS, game_type, sprites, background, screen, 0, self.ai_lvl)
+        game = Game(ball, bat1, bat2, self.scr_width, self.scr_height, self.sound)
+        game.main(game_type, sprites, background, screen, 0, self.ai_lvl)
 
-    def _against_wall(self, screen, clock, game_type, hiscore, backgrd2):
+    def _against_wall(self, screen, game_type, hiscore, backgrd2):
         sprites = pygame.sprite.Group()
         background = pygame.image.load(os.path.join(dirname, "assets", backgrd2))
         bat1 = Bat(5, self.scr_height/2, self.scr_width, self.scr_height)
@@ -95,6 +94,6 @@ class Main:
         sprites.add(bat1)
         sprites.add(ball)
 
-        game = Game(ball, bat1, None, clock, self.scr_width, self.scr_height, self.sound)
-        hiscore = game.main(FPS, game_type, sprites, background, screen, hiscore, self.ai_lvl)
+        game = Game(ball, bat1, None, self.scr_width, self.scr_height, self.sound)
+        hiscore = game.main(game_type, sprites, background, screen, hiscore, self.ai_lvl)
         return hiscore

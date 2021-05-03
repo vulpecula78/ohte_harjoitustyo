@@ -36,7 +36,7 @@ class Gamevents:
             running = self.wait(player)
         else: #if computer player, wait for 1,5s before launch
             pygame.time.delay(1500)
-            
+
         y_velocity = random.randint(-4, 5)
         x_velocity = random.randint(3, 5)
 
@@ -99,12 +99,12 @@ class Gamevents:
         return p1_score
 
 
-    def ball_on_table(self, ball, score, p1_score, hi_score):
+    def ball_on_table(self, ball, score, p1_score, hi_score, running):
         if ball.rect.x < -40:
             high = score.wall_game_over(p1_score)
             self.wait(1)
             return False, high
-        return True, hi_score
+        return running, hi_score
 
 
     def is_p2_score(self, ball, p2_score, score, running, player2, sound):
@@ -124,7 +124,7 @@ class Gamevents:
         return running, p2_score
 
 
-    def is_p1_score(self, ball, p1_score, score, running, pvp, sound):
+    def is_p1_score(self, ball, p1_score, score, running, game_type, sound):
         if ball.rect.x > self.scr_width:
             p1_score += 1
             if sound is not None:
@@ -137,7 +137,7 @@ class Gamevents:
                 return running, p1_score
             score.player_scores(1)
             pygame.display.update()
-            if pvp:
+            if game_type == "pvp":
                 running = self.launch(2, ball)
             else:
                 running = self.launch(3, ball)

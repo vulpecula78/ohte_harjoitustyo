@@ -1,5 +1,5 @@
 import pygame
-from settings_rw import Settings_rw
+from settings_rw import SettingsRW
 
 BCKGRD = (55, 185, 75)
 TITLE = (255, 215, 55)
@@ -15,7 +15,7 @@ class Mmenu:
         self.title_font = pygame.font.Font(pygame.font.match_font('arial'), 38)
         self.font = pygame.font.Font(pygame.font.match_font('arial'), 32)
         self.middle = self.scr_width / 2
-        self.setupfile = Settings_rw()
+        self.setupfile = SettingsRW()
 
     def menu(self, lsetup):
         mid = self.middle

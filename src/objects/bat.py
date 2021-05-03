@@ -9,7 +9,7 @@ class Bat(pygame.sprite.Sprite):
     """
     def __init__(self, pos_x, pos_y, scr_width, scr_height):
         """Initializes bat with starting position and screen size.
-        
+
         Args:
             pos_x: horizontal starting position.
             pos_y: vertical starting position.
@@ -29,7 +29,7 @@ class Bat(pygame.sprite.Sprite):
         """Sets new vertical position with given value.
         Bat vertical position can be set between 0 and
         screen height - 100 (bat size) - 45(score area).
-        
+
             Args:
             y_pos: new vertical position for bat.
         """
