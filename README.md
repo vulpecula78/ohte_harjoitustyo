@@ -8,7 +8,7 @@ Sovellus on klassisen pong pelin klooni. Pelissä pelaajat ohjaavat mailoja, joi
 
 Lataa uusin julkaisu: 
 
- - [Viikko5 release](https://github.com/vulpecula78/ohte_harjoitustyo/releases/tag/Viikko5)
+ - [Viikko5 release](https://github.com/vulpecula78/ohte_harjoitustyo/releases/tag/Viikko6)
  
 tai kloonaa repositorio.
 
