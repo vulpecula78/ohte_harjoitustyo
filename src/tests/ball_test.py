@@ -1,6 +1,6 @@
 import unittest
 import pygame
-from ball import Ball
+from objects.ball import Ball
 
 class TestBall(unittest.TestCase):
     def setUp(self):

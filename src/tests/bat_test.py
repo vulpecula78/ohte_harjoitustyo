@@ -1,6 +1,6 @@
 import unittest
 import pygame
-from bat import Bat
+from objects.bat import Bat
 
 class TestBat(unittest.TestCase):
     def setUp(self):

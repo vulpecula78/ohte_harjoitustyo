@@ -2,8 +2,8 @@
 import os
 import pygame
 
-from bat import Bat
-from ball import Ball
+from objects.bat import Bat
+from objects.ball import Ball
 from settings_rw import Settings_rw
 from ui.game import Game
 from ui.mmenu import Mmenu

@@ -1,7 +1,7 @@
 import unittest
 import pygame
-from ball import Ball
-from bat import Bat
+from objects.ball import Ball
+from objects.bat import Bat
 from computer_ai import ComputerAi
 
 

@@ -1,8 +1,8 @@
 import unittest
 import pygame
 from gamevents import Gamevents
-from ball import Ball
-from bat import Bat
+from objects.ball import Ball
+from objects.bat import Bat
 from ui.score import Score
 
 

@@ -4,14 +4,21 @@ import pygame
 
 dirname = os.path.dirname(__file__)
 
-'''Class Bat'''
 class Bat(pygame.sprite.Sprite):
-    ''' Initializes bat with starting position and screen size'''
+    """Initializes bat with starting position and screen size.
+    """
     def __init__(self, pos_x, pos_y, scr_width, scr_height):
+        """Initializes bat with starting position and screen size.
+        
+        Args:
+            pos_x: horizontal starting position.
+            pos_y: vertical starting position.
+            scr_width: Screen width in pixels.
+            scr_height: Screen height in pixels.
+        """
         super().__init__()
 
-        self.image = pygame.image.load(os.path.join(dirname,
-                                                    "assets", "bat.png"))
+        self.image = pygame.image.load(os.path.join(dirname, "../assets", "bat.png"))
         self.rect = self.image.get_rect()
         self.rect.x = pos_x
         self.rect.y = pos_y
@@ -19,8 +26,13 @@ class Bat(pygame.sprite.Sprite):
         self.scr_height = scr_height
 
     def set_y_position(self, y_pos):
-        '''Sets new vertical position with given value.
-            Bat y_pos is between 0 and screen height - 100 (bat size) - 45(score area).'''
+        """Sets new vertical position with given value.
+        Bat vertical position can be set between 0 and
+        screen height - 100 (bat size) - 45(score area).
+        
+            Args:
+            y_pos: new vertical position for bat.
+        """
         if 0 <= y_pos <= self.scr_height - 145:
             self.rect.y = y_pos
 
