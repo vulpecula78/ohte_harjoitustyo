@@ -34,15 +34,16 @@ class Gamevents:
         running = True
         if 1 <=  player <= 2:
             running = self.wait(player)
+        else: #if computer player, wait for 1,5s before launch
+            pygame.time.delay(1500)
+            
         y_velocity = random.randint(-4, 5)
         x_velocity = random.randint(3, 5)
 
         if player == 0:
-            if random.randint(1, 3) == 2:
+            if random.randint(1, 2) == 2:
                 player = 2
         if 2 <= player <= 3:
-            if player == 3:     #if computer player, wait for 1,5s before launch
-                pygame.time.delay(1500)
             x_velocity = x_velocity * -1
             xpos = self.scr_width - 80
         else:
@@ -62,7 +63,7 @@ class Gamevents:
             y_acc = random.randint(-1, 2)
             xvel = ball.get_x_velocity()
             yvel = ball.get_y_velocity()
-            if -xvel + x_acc == 0:
+            if -(xvel + -x_acc) == 0 or (xvel + x_acc) == 0:
                 xvel = xvel + 1
             if sound is not None:
                 if hit:
@@ -70,13 +71,12 @@ class Gamevents:
                 else:
                     sound.bat_sound()
             if pygame.sprite.collide_rect(ball, bat1) and ball.rect.x >= 15:
-                ball.set_position(ball.rect.x + 26, ball.rect.y)
-                ball.set_velocity(-xvel + x_acc, yvel + y_acc)
-            elif pygame.sprite.collide_rect(ball, bat2) and ball.rect.x < self.scr_width - 55:
-                ball.set_position(self.scr_width - 86, ball.rect.y) #Fix this formula
+                ball.set_position(46, ball.rect.y)
+                ball.set_velocity(-(xvel + -x_acc), yvel + y_acc)
+            elif pygame.sprite.collide_rect(ball, bat2) and ball.rect.x <= self.scr_width - 55:
+                ball.set_position(self.scr_width - 87, ball.rect.y) #Fix this formula
                 ball.set_velocity((xvel + x_acc) * -1, yvel + y_acc)
-            else:
-                return
+            return
 
 
     def collision_wall(self, ball, bat1, p1_score, sound):

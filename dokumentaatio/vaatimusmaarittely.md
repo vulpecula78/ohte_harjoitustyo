@@ -23,7 +23,7 @@
     - Pelaaminen tietokonetta vastaan. [Tehty]
     - Äänet[tehty vk5]
     - Yksinpelin piste-ennätys[tehty, osittain vk5]
-    - Vaikeus asetuksia, käyttöliittymään asetukset valikko.
+    - Vaikeus asetuksia, käyttöliittymään asetukset valikko[tehty vk6].
     - Mahdollisuus lyödä palloa ala- ja yläviistoon.
     - Pelikentälle ilmestyviä yllätyksiä, jotka vaikuttavat pallon tai mailan liikkeisiin
     - Parannuksia grafiikkaan

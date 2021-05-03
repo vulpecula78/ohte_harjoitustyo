@@ -22,7 +22,11 @@ class Ball(pygame.sprite.Sprite):
 
     def set_velocity(self, xvel, yvel):
         '''Set balls velocity with x and y component.'''
-        if -11 < xvel < 11:
+        if xvel < -10:
+            self.x_velocity = -10
+        elif xvel > 10:
+            self.x_velocity = 10
+        else:
             self.x_velocity = xvel
         if -11 < yvel < 11:
             self.y_velocity = yvel

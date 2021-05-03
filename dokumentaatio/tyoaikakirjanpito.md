@@ -21,4 +21,5 @@
 | 22.4 | 7,0    |Added against the wall game mode, added sound effects           |
 | 24.4 | 6,0    |Sekvenssikaavio, testejä, score ja mmenu ui luokkaan   |
 | 25.4 | 1,0    |Dokumentaation päivitys    |
-| yht. | 57,0   |   |
+| 29.4 | 8,0    |Asetusvalikko, muutoksia, grafiikoita  |
+| yht. | 65,0   |   |

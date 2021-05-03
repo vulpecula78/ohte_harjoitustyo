@@ -1,15 +1,15 @@
 import os
 
-
 dirname = os.path.dirname(__file__)
 
-class Settings:
+class Settings_rw:
     '''Reads and writes setup file
-    setup is a list: [screen_width, screen_height, sounds, ai level, small scr hi, mid scr hi, large scr hi].
-    If setup fi does not exist, default setup will be written. Default =  [800, 600, False, "easy", 0, 0 ,0]
-    is given by mainprg.
+    setup is a list: [screen_width, screen_height, sounds, ai level,
+    small scr hi, mid scr hi, large scr hi].
+    If setup fi does not exist, default setup will be written.
+    Default = [800, 600, False, "easy", 0, 0 ,0] is given by main.py.
     '''
-    
+
     def load_settings(self, setup):
         try:
             game_setup_file = os.path.join(dirname, "apca_settings.txt")
@@ -23,10 +23,10 @@ class Settings:
                     i = i + 1
                 if i < 14:
                     lsetup = self.write_settings(setup)
-        except: 
+        except:
             lsetup = self.write_settings(setup)
         return lsetup
-            
+
     #Write file.
     def write_settings(self, setup):
         game_setup_file = os.path.join(dirname, "apca_settings.txt")
@@ -48,4 +48,3 @@ class Settings:
         game_setup.write("\n")
         game_setup.close()
         return setup
-        

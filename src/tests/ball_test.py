@@ -26,13 +26,13 @@ class TestBall(unittest.TestCase):
     def test_pallon_nopeus_ei_nouse_liikaa_pos(self):
         self.ball.set_velocity(6, 9)
         self.ball.set_velocity(11, 11)
-        self.assertEqual((self.ball.get_x_velocity()), 6)
+        self.assertEqual((self.ball.get_x_velocity()), 10)
         self.assertEqual((self.ball.get_y_velocity()), 9)
 
     def test_pallon_nopeus_ei_nouse_liikaa_neg(self):
         self.ball.set_velocity(-8, -8)
         self.ball.set_velocity(-11, -11)
-        self.assertEqual((self.ball.get_x_velocity()), -8)
+        self.assertEqual((self.ball.get_x_velocity()), -10)
         self.assertEqual((self.ball.get_y_velocity()), -8)        
 
     def test_pallon_tilanne_paivittyy(self):

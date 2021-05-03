@@ -14,12 +14,15 @@ class Game():
         self.scr_width = scr_width
         self.scr_height = scr_height
         self.events = Gamevents(scr_width, scr_height)
-        if sounds == "True":            
-            self.sound = SoundEffects()
+        self.sound = self._init_sound(sounds)
+        
+    def _init_sound(self, sounds):
+        if sounds == "True":
+            return SoundEffects()
         else:
-            self.sound = None
+            return None
 
-    def main(self, fps, game_type, all_sprites, background, screen, hi_score):
+    def main(self, fps, game_type, all_sprites, background, screen, hi_score, ai_lvl):
         '''Game main loop'''
         running = True
         pvp = True
@@ -29,7 +32,7 @@ class Game():
         p2_score = 0
         score = Score(screen, self.scr_width, self.scr_height, hi_score)
         if game_type == "computer":
-            computer = ComputerAi(self.ball, self.bat2, self.scr_width)
+            computer = ComputerAi(self.ball, self.bat2, self.scr_width, ai_lvl)
             player2 = 3     #Set player2 to computer player.
             pvp = False
         elif game_type == "wall":
