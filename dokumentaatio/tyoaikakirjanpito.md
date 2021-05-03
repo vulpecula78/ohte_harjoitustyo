@@ -22,4 +22,6 @@
 | 24.4 | 6,0    |Sekvenssikaavio, testejä, score ja mmenu ui luokkaan   |
 | 25.4 | 1,0    |Dokumentaation päivitys    |
 | 29.4 | 8,0    |Asetusvalikko, muutoksia, grafiikoita  |
-| yht. | 65,0   |   |
+|  2.5 | 2,0    |Bugikorjausta, muutoksia sovelluksen rakenteeseen. |
+|  3.5 | 6,0    |Docstring-dokumentointi, muu dokumentaatio |
+| yht. | 73,0   |   |

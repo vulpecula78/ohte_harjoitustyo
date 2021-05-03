@@ -2,7 +2,7 @@
 
 ## APCA eli Another pong clone again
 
-Sovellus on klassisen pong pelin klooni. Pelissä pelaajat ohjaavat mailoja, joilla he koittavat pitää pallon kentällä. Mikäli pallo lentää vastustajan päästä ulos, saa pelaaja pisteen. Voit pelata kaksin peliä tai tietokonetta vastaan. Tietokone on tällä hetkellä asetettu helpoksi.
+Sovellus on klassisen pong pelin klooni. Pelissä pelaajat ohjaavat mailoja, joilla he koittavat pitää pallon kentällä. Mikäli pallo lentää vastustajan päästä ulos, saa pelaaja pisteen. Voit pelata kaksinpeliä tai tietokonetta vastaan. 
 
 ### Pelin asennus
 
@@ -27,7 +27,7 @@ poetry run invoke start
 Sovellus on tehty ja testattu python 3.8.8 versiolla. 
 
 ### Pelaaminen
-Pelissä on tällä hetkellä mahdollisuus kaksinpeliin tai tietokonetta vastaan. Vasen pelaaja ohjaa mailaa näppäimistä q ja z. Oikea pelaajaa ohjaa mailaa nuolinäppäimistä. Tietokone on aina oikeanpuoleinen pelaaja. Pallon lentäessä ulos kentältä, peli pysähtyy, kunnes pelaaja, jonka päästä pallo lensi ulos, laukaisee pallon takaisin kentälle. Vasen pelaaja näppäimestä a ja oikea pelaaja näppäimestä nuoli vasemmalle. Pallon nopeus ja suunta voivat muuttua aina mailaan osuessaan. Peli päättyy kun jompikumpi pelaaja saa 3 pistettä. Takaisin päävalikkoon pääsee painamalla laukaisunappia (a tai nuoli vas.).
+Pelissä on tällä hetkellä mahdollisuus kaksinpeliin tai tietokonetta vastaan. Vasen pelaaja ohjaa mailaa näppäimistä q ja z. Oikea pelaajaa ohjaa mailaa nuolinäppäimistä. Tietokone on aina oikeanpuoleinen pelaaja. Pallon lentäessä ulos kentältä, peli pysähtyy, kunnes pelaaja, jonka päästä pallo lensi ulos, laukaisee pallon takaisin kentälle. Vasen pelaaja näppäimestä a ja oikea pelaaja näppäimestä nuoli vasemmalle. Pallon nopeus ja suunta voivat muuttua aina mailaan osuessaan. Peli päättyy kun jompikumpi pelaaja saa 5 pistettä. Takaisin päävalikkoon pääsee painamalla laukaisunappia (a tai nuoli vas.). Pelin asetuksia (ruudunkoko, äänet ja vaikeusaste) voi muuttaa.
 
 ### Dokumentaatio
  1. [Pelin ohjeet](https://github.com/vulpecula78/ohte_harjoitustyo/blob/master/dokumentaatio/ohjeet.md)

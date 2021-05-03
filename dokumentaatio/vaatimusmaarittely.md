@@ -13,7 +13,7 @@
     
 ## Käyttöliittymä
 
- Pelissä on päävalikko[tehty], josta valitaan pelitapa. Pelissä on pelikentät kaksin- ja yksinpelille[tehty vk5]. Yksinpelissä ja tietokonetta vastaan pelatessa pelaaja ohjaa mailaa näppäimillä q, a ja s, kaksinpelissä toinen pelaaja ohjaa mailaa nuolinäppäimillä. Pallon osuessa mailaan, sen suunta ja nopeus hieman muuttuu satunnaisesti.
+ Pelissä on päävalikko[tehty], josta valitaan pelitapa. Pelissä on pelikentät kaksin- ja yksinpelille[tehty vk5]. Yksinpelissä ja tietokonetta vastaan pelatessa pelaaja ohjaa mailaa näppäimillä q, a ja s, kaksinpelissä toinen pelaaja ohjaa mailaa nuolinäppäimillä. Pallon osuessa mailaan, sen suunta ja nopeus hieman muuttuvat satunnaisesti.
  
 ## Jatkokehitys
  
@@ -24,6 +24,7 @@
     - Äänet[tehty vk5]
     - Yksinpelin piste-ennätys[tehty, osittain vk5]
     - Vaikeus asetuksia, käyttöliittymään asetukset valikko[tehty vk6].
+    - Yksinpelin parhaan tuloksen muistaminen.
     - Mahdollisuus lyödä palloa ala- ja yläviistoon.
     - Pelikentälle ilmestyviä yllätyksiä, jotka vaikuttavat pallon tai mailan liikkeisiin
     - Parannuksia grafiikkaan
