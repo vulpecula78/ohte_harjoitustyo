@@ -26,7 +26,7 @@ class TestGamevents(unittest.TestCase):
         self.assertEqual(self.gamevents.launch(0, self.ball), True)
         
     def test_against_wall_pallo_pysyy_poydalla_hiscore_ei_muutu(self):
-        run, hiscore = self.gamevents.ball_on_table(self.ball, self.score, 4, 5)
+        run, hiscore = self.gamevents.ball_on_table(self.ball, self.score, 4, 5, True)
         self.assertEqual(run, True)
         self.assertEqual(hiscore, 5)
             

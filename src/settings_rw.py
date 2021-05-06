@@ -12,10 +12,11 @@ class SettingsRW:
 
     def load_settings(self, setup):
         """Loads settings from apca_settings.txt file. If file doesn't exist,
-        it will be created withj default values from setup.
+        it will be created with default values from setup.
 
         Args:
-            setup: List of default values, if apca_settings.txt not exists.
+            setup: List of default values. These will be used,
+            if apca_settings.txt not exists.
 
         Returns:
             lsetup: list of game settings
@@ -41,10 +42,11 @@ class SettingsRW:
         """Writes setting into apca_settings.txt file.
 
         Args:
-            setup: list of values to be written into file.
+            setup: list of values to be written into a file.
 
         Returns:
-            setup: list of setup values."""
+            setup: list of setup values.
+        """
         game_setup_file = os.path.join(dirname, "apca_settings.txt")
         game_setup = open(game_setup_file, "w")
         game_setup.write("screen width: \n")

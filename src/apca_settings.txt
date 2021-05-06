@@ -1,14 +1,14 @@
 screen width: 
-800
+640
 screen height: 
-600
+480
 sounds: 
 True
 ai level: 
 average
 hiscore in small screen: 
-0
+5
 hiscore in medium screen: 
-0
+14
 hiscore in large screen: 
-0
+6

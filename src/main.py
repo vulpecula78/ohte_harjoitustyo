@@ -17,12 +17,12 @@ class Main:
         self.sound = "False"
         self.ai_lvl = "easy"
         self.setup = [800, 600, "False", "easy", 0, 0 ,0]
+        self.settings_rw = SettingsRW()
 
     def main(self):
         #load settings if file exist.
-        #If not, then create file.
-        settings_rw = SettingsRW()
-        lsetup = settings_rw.load_settings(self.setup)
+        #If not, then create file.        
+        lsetup = self.settings_rw.load_settings(self.setup)
 
         #init settings
         self.scr_width = int(lsetup[0])
@@ -61,7 +61,10 @@ class Main:
             elif action == "computer":
                 self._normal_game(screen, "computer", backgrd1)
             elif action == "wall":
-                hiscore = self._against_wall(screen, "wall", hiscore, backgrd2)
+                score = self._against_wall(screen, "wall", hiscore, backgrd2)
+                if score > hiscore:
+                    hiscore = score
+                    lsetup = self._new_hiscore(lsetup, score)
             elif action == "settings":
                 main_loop = False
                 restart = True
@@ -97,3 +100,13 @@ class Main:
         game = Game(ball, bat1, None, self.scr_width, self.scr_height, self.sound)
         hiscore = game.main(game_type, sprites, background, screen, hiscore, self.ai_lvl)
         return hiscore
+
+    def _new_hiscore(self, lsetup, score):
+        if self.scr_width == 1024:
+            lsetup[6] = score
+        elif self.scr_width == 800:
+            lsetup[5] = score
+        else:
+            lsetup[4] = score
+        lsetup = self.settings_rw.write_settings(lsetup)
+        return lsetup
