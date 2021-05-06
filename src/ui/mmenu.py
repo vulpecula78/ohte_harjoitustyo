@@ -7,8 +7,14 @@ TEXT = (190, 195, 255)
 HBUTTON = (175, 185, 175)
 
 class Mmenu:
-    '''Main menu for APC'''
+    '''Main menu and settings menu for APCA'''
     def __init__(self, scr_width, scr_height, screen):
+        """Initializes mmenu object with given screen size.
+
+        Args:
+            scr_width: screen width in pixels.
+            scr_height: screen height in pixels.
+        """
         self.scr_width = scr_width
         self.scr_height = scr_height
         self.screen = screen
@@ -18,6 +24,14 @@ class Mmenu:
         self.setupfile = SettingsRW()
 
     def menu(self, lsetup):
+        """Main menu screen.
+
+        Args:
+            lsetup: list of current setup.
+
+        Returns:
+            String, selected action: "PvP", "computer", "wall", "settings" or "quit"
+        """
         mid = self.middle
 
         #menu item y locations
@@ -153,7 +167,6 @@ class Mmenu:
                 pygame.draw.rect(self.screen, HBUTTON, [mid + 15, sett3 - 20, 85, 40]) # easy
             if mid + 125 <= mouse[0] <= mid + 255 and sett3 - 20 <= mouse[1] <= sett3 + 20 or lsetup[3] == "average":
                 pygame.draw.rect(self.screen, HBUTTON, [mid + 125, sett3 - 20, 130, 40]) # average
-
             #Back to main menu
             if mid - 220 <= mouse[0] <= mid + 220 and sett5 - 20 <= mouse[1] <= sett5 + 20:
                 pygame.draw.rect(self.screen, HBUTTON, [mid - 220, sett5 - 20, 440, 40])

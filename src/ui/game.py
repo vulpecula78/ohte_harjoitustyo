@@ -67,7 +67,7 @@ class Game():
         player2 = 2
         return player2, p2_score, None
 
-    def main(self, game_type, all_sprites, background, screen, hi_score, ai_lvl):
+    def main(self, game_type, all_sprites, background, screen, hiscore, ai_lvl):
         '''Game main loop, starts the game, reads the keyboard and draws the game screen.
 
         Args:
@@ -75,16 +75,16 @@ class Game():
             all_sprites: Sprite objects.
             background: background image.
             screen: pygame display module initialized in main.py
-            hi_score: Int, old hi_score for against the wall game type.
+            hiscore: Int, old hiscore for against the wall game type.
             ai_lvl: String, "easy" or "average"
 
         Returns:
-            hi_score: Int, new hiscore.
+            hiscore: Int, new hiscore.
         '''
         clock = pygame.time.Clock()
         running = True
         p1_score = 0
-        score = Score(screen, self.scr_width, self.scr_height, hi_score)
+        score = Score(screen, self.scr_width, self.scr_height, hiscore)
         player2, p2_score, computer = self._init_game(game_type, ai_lvl)
         self.events.launch(0, self.ball)
 
@@ -122,7 +122,8 @@ class Game():
                     p2_score, score, running, player2, self.sound)
             else:
                 p1_score = self.events.collision_wall(self.ball, self.bat1, p1_score, self.sound)
-                running, hi_score = self.events.ball_on_table(self.ball, score, p1_score, hi_score, running)
+                running, hiscore = self.events.ball_on_table(
+                    self.ball, score, p1_score, hiscore, running)
 
             self.ball.update()
             screen.blit(background, (0,0))
@@ -130,4 +131,4 @@ class Game():
             all_sprites.draw(screen)
             pygame.display.update()
 
-        return hi_score
+        return hiscore
