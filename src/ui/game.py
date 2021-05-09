@@ -1,9 +1,9 @@
 '''Game loop for Another Pong Clone Again'''
 import pygame
-from ui.score  import Score
 from computer_ai import ComputerAi
 from gamevents import Gamevents
-from sound_effects import SoundEffects
+from ui.sound_effects import SoundEffects
+from ui.score  import Score
 
 FPS = 120
 
