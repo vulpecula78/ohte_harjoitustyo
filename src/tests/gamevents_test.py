@@ -51,12 +51,19 @@ class TestGamevents(unittest.TestCase):
         self.assertGreater(self.ball.get_x_velocity(), 3)
         self.assertEqual(score, 2)
         
+    def test_pallo_kimpoaa_taka_seinasta_against_wall(self):
+        self.ball.rect.x = 0.75 * 800 - 50
+        self.ball.set_velocity(7, 1)
+        self.ball.update()
+        self.gamevents.collision_wall(self.ball, self.bat1, 2, None)
+        self.assertLess(self.ball.get_x_velocity(), 0)
+        
     def test_pallo_vaihtaa_suuntaa_pelaajan1_mailasta(self):
         self.ball.set_position(31, 120)
         self.ball.set_velocity(-8, 3)
         self.bat1.set_y_position(100)
         self.ball.update()
-        self.gamevents.collision(self.bat1, self.bat2, self.ball, None, False)
+        self.gamevents.collision(self.bat1, self.bat2, self.ball, None, True)
         self.assertGreater(self.ball.get_x_velocity(), 6)
 
     def test_pallo_vaihtaa_suuntaa_pelaajan2_mailasta(self):

@@ -21,7 +21,7 @@ class Main:
         self.sound = "False"
         self.ai_lvl = "easy"
         self.setup = [800, 600, "False", "easy", 0, 0 ,0]
-        self.settings_rw = SettingsRW()
+        self.settings_rw = SettingsRW("apca_settings.txt")
 
     def main(self):
         """Main loop. Loads settings if file exist. If not, then creates file

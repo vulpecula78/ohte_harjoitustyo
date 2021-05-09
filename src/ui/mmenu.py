@@ -21,7 +21,7 @@ class Mmenu:
         self.title_font = pygame.font.Font(pygame.font.match_font('arial'), 38)
         self.font = pygame.font.Font(pygame.font.match_font('arial'), 32)
         self.middle = self.scr_width / 2
-        self.setupfile = SettingsRW()
+        self.setupfile = SettingsRW("apca_settings.txt")
 
     def menu(self, lsetup):
         """Main menu screen.
@@ -151,21 +151,28 @@ class Mmenu:
 
             #Highlight settings:
             #Sound setting on / off
-            if mid + 50 <= mouse[0] <= mid + 100 and sett1 - 20 <= mouse[1] <= sett1 + 20 or lsetup[2] == "True":
+            if mid + 50 <= mouse[0] <= mid + 100 and sett1 - 20 <= mouse[1] <= sett1 + 20 or \
+                lsetup[2] == "True":
                 pygame.draw.rect(self.screen, HBUTTON, [mid + 50, sett1 - 20, 50, 40]) # on
-            if mid + 130 <= mouse[0] <= mid + 190 and sett1 - 20 <= mouse[1] <= sett1 + 20 or lsetup[2] == "False":
+            if mid + 130 <= mouse[0] <= mid + 190 and sett1 - 20 <= mouse[1] <= sett1 + 20 or \
+                lsetup[2] == "False":
                 pygame.draw.rect(self.screen, HBUTTON, [mid + 130, sett1 - 20, 60, 40]) # off
             #Screen Size
-            if mid - 55 <= mouse[0] <= mid + 40 and sett2 - 20 <= mouse[1] <= sett2 + 20 or lsetup[0] == "640":
+            if mid - 55 <= mouse[0] <= mid + 40 and sett2 - 20 <= mouse[1] <= sett2 + 20 or \
+                lsetup[0] == "640":
                 pygame.draw.rect(self.screen, HBUTTON, [mid - 55, sett2 - 20, 95, 40])
-            if mid + 70 <= mouse[0] <= mid + 140 and sett2 - 20 <= mouse[1] <= sett2 + 20 or lsetup[0] == "800":
+            if mid + 70 <= mouse[0] <= mid + 140 and sett2 - 20 <= mouse[1] <= sett2 + 20 or \
+                lsetup[0] == "800":
                 pygame.draw.rect(self.screen, HBUTTON, [mid + 70, sett2 - 20, 70, 40])
-            if mid + 160 <= mouse[0] <= mid + 260 and sett2 - 20 <= mouse[1] <= sett2 + 20 or lsetup[0] == "1024":
+            if mid + 160 <= mouse[0] <= mid + 260 and sett2 - 20 <= mouse[1] <= sett2 + 20 or \
+                lsetup[0] == "1024":
                 pygame.draw.rect(self.screen, HBUTTON, [mid + 160, sett2 - 20, 100, 40])
             #AI level
-            if mid + 15 <= mouse[0] <= mid + 100 and sett3 - 20 <= mouse[1] <= sett3 + 20 or lsetup[3] == "easy":
+            if mid + 15 <= mouse[0] <= mid + 100 and sett3 - 20 <= mouse[1] <= sett3 + 20 or \
+                lsetup[3] == "easy":
                 pygame.draw.rect(self.screen, HBUTTON, [mid + 15, sett3 - 20, 85, 40]) # easy
-            if mid + 125 <= mouse[0] <= mid + 255 and sett3 - 20 <= mouse[1] <= sett3 + 20 or lsetup[3] == "average":
+            if mid + 125 <= mouse[0] <= mid + 255 and sett3 - 20 <= mouse[1] <= sett3 + 20 or \
+                lsetup[3] == "average":
                 pygame.draw.rect(self.screen, HBUTTON, [mid + 125, sett3 - 20, 130, 40]) # average
             #Back to main menu
             if mid - 220 <= mouse[0] <= mid + 220 and sett5 - 20 <= mouse[1] <= sett5 + 20:

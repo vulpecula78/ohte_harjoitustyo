@@ -9,6 +9,8 @@ class SettingsRW:
     If setup fi does not exist, default setup will be written.
     Default = [800, 600, False, "easy", 0, 0 ,0] is given by main.py.
     '''
+    def __init__(self, file):
+        self.settings_file = file
 
     def load_settings(self, setup):
         """Loads settings from apca_settings.txt file. If file doesn't exist,
@@ -22,7 +24,7 @@ class SettingsRW:
             lsetup: list of game settings
         """
         try:
-            game_setup_file = os.path.join(dirname, "apca_settings.txt")
+            game_setup_file = os.path.join(dirname, self.settings_file)
             with open(game_setup_file) as game_setup:
                 i = 0
                 lsetup = []
@@ -33,7 +35,7 @@ class SettingsRW:
                     i = i + 1
                 if i < 14:
                     lsetup = self.write_settings(setup)
-        except:
+        except FileNotFoundError:
             lsetup = self.write_settings(setup)
         return lsetup
 
@@ -47,7 +49,7 @@ class SettingsRW:
         Returns:
             setup: list of setup values.
         """
-        game_setup_file = os.path.join(dirname, "apca_settings.txt")
+        game_setup_file = os.path.join(dirname, self.settings_file)
         game_setup = open(game_setup_file, "w")
         game_setup.write("screen width: \n")
         game_setup.write(str(setup[0]))
