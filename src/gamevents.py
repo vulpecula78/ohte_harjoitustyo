@@ -92,7 +92,7 @@ class Gamevents:
             hit: Boolean, if True gives little more horizontal velocity for the ball.
 
         Returns:
-            nothing.
+            None.
         '''
         if pygame.sprite.collide_rect(ball, bat1) or pygame.sprite.collide_rect(ball, bat2):
             x_acc = random.randint(-1, 2)
@@ -112,7 +112,7 @@ class Gamevents:
                 ball.set_position(46, ball.rect.y)
                 ball.set_velocity(-(xvel + -x_acc), yvel + y_acc)
             elif pygame.sprite.collide_rect(ball, bat2) and ball.rect.x <= self.scr_width - 55:
-                ball.set_position(self.scr_width - 87, ball.rect.y) #Fix this formula
+                ball.set_position(self.scr_width - 87, ball.rect.y)
                 ball.set_velocity((xvel + x_acc) * -1, yvel + y_acc)
             return
 

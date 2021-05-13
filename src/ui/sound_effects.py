@@ -9,8 +9,10 @@ class SoundEffects:
     def __init__(self):
         """Initializes pygame.mixer and loads sound effects."""
         pygame.mixer.init()
-        self.ball_hit1 = pygame.mixer.Sound(os.path.join(dirname,"../assets/sounds","bat_sound1.wav"))
-        self.ball_hit2 = pygame.mixer.Sound(os.path.join(dirname,"../assets/sounds","bat_sound2.wav"))
+        self.ball_hit1 = pygame.mixer.Sound(os.path.join(dirname,
+                                                         "../assets/sounds","bat_sound1.wav"))
+        self.ball_hit2 = pygame.mixer.Sound(os.path.join(dirname,
+                                                         "../assets/sounds","bat_sound2.wav"))
         self.cheer = pygame.mixer.Sound(os.path.join(dirname, "../assets/sounds","cheer.wav"))
         self.hit = pygame.mixer.Sound(os.path.join(dirname, "../assets/sounds","hit.wav"))
         self.cheer.set_volume(0.5)

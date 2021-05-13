@@ -10,10 +10,14 @@ class SettingsRW:
     Default = [800, 600, False, "easy", 0, 0 ,0] is given by main.py.
     '''
     def __init__(self, file):
+        '''Initializes SettingsRW.
+
+        Args: file, filename of the file to be handled.
+        '''
         self.settings_file = file
 
     def load_settings(self, setup):
-        """Loads settings from apca_settings.txt file. If file doesn't exist,
+        """Loads settings from apca_settings.txt or filename given file. If file doesn't exist,
         it will be created with default values from setup.
 
         Args:
