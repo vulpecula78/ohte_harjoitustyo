@@ -24,7 +24,7 @@ Peli käynnistyy komennolla:
 poetry run invoke start
 ```
 
-Sovellus on tehty ja testattu python 3.8.8 versiolla. 
+Sovellus on tehty ja testattu python 3.8.8 versiolla. Sovellusta on myös testattu python versiolla 3.6.9.
 
 ### Pelaaminen
 Pelissä on tällä hetkellä mahdollisuus kaksinpeliin tai tietokonetta vastaan. Vasen pelaaja ohjaa mailaa näppäimistä q ja z. Oikea pelaajaa ohjaa mailaa nuolinäppäimistä. Tietokone on aina oikeanpuoleinen pelaaja. Pallon lentäessä ulos kentältä, peli pysähtyy, kunnes pelaaja, jonka päästä pallo lensi ulos, laukaisee pallon takaisin kentälle. Vasen pelaaja näppäimestä a ja oikea pelaaja näppäimestä nuoli vasemmalle. Pallon nopeus ja suunta voivat muuttua aina mailaan osuessaan. Peli päättyy kun jompikumpi pelaaja saa 5 pistettä. Takaisin päävalikkoon pääsee painamalla laukaisunappia (a tai nuoli vas.). Pelin asetuksia (ruudunkoko, äänet ja vaikeusaste) voi muuttaa.
@@ -34,6 +34,7 @@ Pelissä on tällä hetkellä mahdollisuus kaksinpeliin tai tietokonetta vastaan
  1. [Määrittelydokumentti](https://github.com/vulpecula78/ohte_harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
  1. [Arkkitehtuurikuvaus](https://github.com/vulpecula78/ohte_harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
  1. [Työaikakirjanpito](https://github.com/vulpecula78/ohte_harjoitustyo/blob/master/dokumentaatio/tyoaikakirjanpito.md)
+ 1. [Sovelluksen testaus](https://github.com/vulpecula78/ohte_harjoitustyo/blob/master/dokumentaatio/Sovelluksen_testaus.md)
 
 ### Testaus
 

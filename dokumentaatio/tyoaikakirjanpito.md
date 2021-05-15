@@ -24,4 +24,8 @@
 | 29.4 | 8,0    |Asetusvalikko, muutoksia, grafiikoita  |
 |  2.5 | 2,0    |Bugikorjausta, muutoksia sovelluksen rakenteeseen. |
 |  3.5 | 6,0    |Docstring-dokumentointi, muu dokumentaatio |
-| yht. | 73,0   |   |
+|  6.5 | 5,0    |Testauksia, HiScoren tallentaminen, äänitiedostot omaan kansioon ja Docstringgejä.|
+|  9.5 | 2,5    |Lisää testejä ja testausta, soundeffects.py saiirretty ui kansioon.    |
+| 13.5 | 1,5    |Pieniä korjauksia, kirjoitusvirheitä ym.   |
+| 15.5 | 
+| yht. | 82,0   |   |
