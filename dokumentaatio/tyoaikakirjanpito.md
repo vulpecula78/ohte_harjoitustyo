@@ -27,5 +27,5 @@
 |  6.5 | 5,0    |Testauksia, HiScoren tallentaminen, äänitiedostot omaan kansioon ja Docstringgejä.|
 |  9.5 | 2,5    |Lisää testejä ja testausta, soundeffects.py saiirretty ui kansioon.    |
 | 13.5 | 1,5    |Pieniä korjauksia, kirjoitusvirheitä ym.   |
-| 15.5 | 
-| yht. | 82,0   |   |
+| 15.5 | 3,0    |Dokumentaation päivitys, loppputestausta, julkaisu |
+| yht. | 85,0   |   |
