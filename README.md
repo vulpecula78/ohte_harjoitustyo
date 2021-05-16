@@ -8,7 +8,7 @@ Sovellus on klassisen pong pelin klooni. Pelissä pelaajat ohjaavat mailoja, joi
 
 Lataa uusin julkaisu: 
 
- - [APCA v1.0](https://github.com/vulpecula78/ohte_harjoitustyo/releases/tag/APCA_v1.0)
+ - [APCA v1.01](https://github.com/vulpecula78/ohte_harjoitustyo/releases/tag/APCA_v1.01)
  
 tai kloonaa repositorio.
 
